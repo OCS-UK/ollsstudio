@@ -1,0 +1,130 @@
+/* 🌸 Olls Creative Studio — Soft Pastel Theme */
+
+:root {
+  --bg: #fcfbfa;
+  --text: #333;
+  --accent: #f7cad0;   /* pastel pink */
+  --accent2: #cde8f2;  /* pastel blue */
+  --card: #ffffff;
+  --radius: 14px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: white;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  height: 48px;
+  vertical-align: middle;
+  border-radius: var(--radius);
+}
+
+.header nav {
+  float: right;
+  margin-top: 10px;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: #444;
+  margin-left: 18px;
+  font-weight: 600;
+}
+
+.header nav a:hover {
+  color: #000;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border-radius: 0 0 40px 40px;
+  color: #222;
+}
+
+.hero h1 {
+  font-size: 2.4em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.btn {
+  background: white;
+  color: #222;
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #222;
+  color: white;
+}
+
+/* Intro cards */
+.intro {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.intro h2 {
+  margin-bottom: 40px;
+  font-size: 1.8em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  font-size: 0.9em;
+  color: #555;
+}
