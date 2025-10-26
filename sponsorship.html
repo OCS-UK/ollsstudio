@@ -1,80 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sponsorship — Olls Creative Studio</title>
-  <link rel="stylesheet" href="assets/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
- <header class="main-header">
-  <div class="logo-area">
-    <img src="assets/page.png" alt="Olls Creative Studio Logo">
-    <h2>Olls Creative Studio</h2>
-  </div>
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="examples.html">Examples</a>
-    <a href="about.html">About</a>
-    <a href="sponsorship.html" class="active">Sponsorship</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
 
+  <!-- 🌸 Header -->
+  <header class="main-header">
+    <div class="logo-area">
+      <img src="assets/page.png" alt="Olls Creative Studio Logo">
+      <h2>Olls Creative Studio</h2>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="examples.html">Examples</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html" class="active">Sponsorship</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <main class="container sponsorship-page">
+  <!-- 🌷 Main Content -->
+  <main class="container contact-page">
     <h1>Work with Olls Creative Studio</h1>
-    <p class="lead">
-      I love collaborating with small businesses, creators, and brands.  
-      Whether you’re looking for a custom Canva template, printable bundle, or creative promotion — let’s work together!
+    <p>I love collaborating with small businesses, creators, and brands.  
+      Whether you’re looking for a custom Canva template, printable bundle,  
+      or creative promotion — let’s work together!
     </p>
 
-    <section class="sponsorship-types">
-      <div class="grid-2">
-        <div class="card">
-          <h3>✨ Brand Collaborations</h3>
-          <p>Let’s design something that fits your brand aesthetic — from planners to posters to digital downloads.</p>
-        </div>
-        <div class="card">
-          <h3>🤝 Sponsorship Features</h3>
-          <p>Want to sponsor a design drop or content series?  
-          I offer creative cross-promotions and shared design bundles.</p>
-        </div>
-      </div>
+    <div class="form-box">
+      <h3>✨ Brand Collaborations</h3>
+      <p>Let’s design something that fits your brand aesthetic — from planners to posters to digital downloads.</p>
 
-      <p style="margin-top:20px;">
-        Ready to collaborate?  
-        <a class="btn primary" href="contact.html?type=sponsorship">Send a Sponsorship Request 💌</a>
-      </p>
-    </section>
+      <h3>🤝 Sponsorship Features</h3>
+      <p>Want to sponsor a design drop or content series? I offer creative cross-promotions and shared design bundles.</p>
+
+      <a href="contact.html" class="button-pink">Send a Sponsorship Request 💌</a>
+    </div>
   </main>
 
+  <!-- 🌸 Footer -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Olls Creative Studio</strong>
-        <p>Designed with love — follow us on social media.</p>
-      </div>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">Etsy</a>
-        <a href="#">Canva</a>
-      </div>
-    </div>
+    <p><strong>Olls Creative Studio</strong></p>
+    <p>Designed with love — follow us on social media.</p>
+    <p>
+      <a href="https://instagram.com" target="_blank">Instagram</a> ·
+      <a href="https://etsy.com" target="_blank">Etsy</a> ·
+      <a href="https://canva.com" target="_blank">Canva</a>
+    </p>
   </footer>
 
-  <script>
-    // Pre-select "Sponsorship" option if coming from sponsorship page
-    const params = new URLSearchParams(window.location.search);
-    if (params.get("type") === "sponsorship") {
-      window.addEventListener("load", () => {
-        const select = document.querySelector('select[name="type"]');
-        if (select) select.value = "Sponsorship";
-      });
-    }
-  </script>
 </body>
 </html>
-
-
