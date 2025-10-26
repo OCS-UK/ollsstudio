@@ -188,3 +188,46 @@ textarea {
 }
 
 
+/* 🌸 Clean Header Style for Olls Creative Studio */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #fff8f9;
+  border-bottom: 1px solid #f1d5da;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-area img {
+  height: 40px;
+  border-radius: 8px;
+}
+
+.logo-area h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #e5738a;
+}
+
+.nav-links .active {
+  color: #e5738a;
+  font-weight: 600;
+}
