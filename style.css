@@ -167,19 +167,24 @@ textarea {
   resize: vertical;
 }
 
-button[type="submit"] {
-  align-self: flex-start;
-  background-color: #f5b6c4;
-  color: #333;
-  padding: 10px 20px;
+.big-send-btn {
+  display: block;
+  width: 100%;
+  background: linear-gradient(90deg, #f7c5d8, #cde7f0);
+  color: #222;
+  font-weight: 700;
+  font-size: 1.1rem;
   border: none;
-  border-radius: 8px;
-  font-size: 1rem;
+  border-radius: 12px;
+  padding: 14px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 16px;
 }
 
-button[type="submit"]:hover {
-  background-color: #f3a0b5;
+.big-send-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
 }
+
 
