@@ -31,26 +31,23 @@
         Please speciify if it is going 
       </p>
 
-     <form action="https://formspree.io/f/xwpwkdww" method="POST" class="contact-form">
-  <label for="name">Your Name</label>
-  <input id="name" name="name" type="text" required>
-
-  <label for="email">Your Email</label>
-  <input id="email" name="_replyto" type="email" required>
-
-  <label for="type">What are you contacting me about?</label>
-  <select id="type" name="type" required>
-    <option value="">-- Please choose one --</option>
-    <option value="Custom Design">Custom Design Idea 💡</option>
-    <option value="Sponsorship">Sponsorship / Collaboration 🤝</option>
-    <option value="Other">Something Else ✨</option>
-  </select>
-
-  <label for="message">Tell me more about your idea or request:</label>
-  <textarea id="message" name="message" rows="5" required></textarea>
-
-  <button class="btn primary" type="submit">Send Message 💌</button>
+    <form action="https://formspree.io/f/xwpwkdww" method="POST">
+  <label>Your Name <input type="text" name="name" required></label>
+  <label>Your Email <input type="email" name="email" required></label>
+  <label>What are you contacting me about?
+    <select name="type">
+      <option value="">-- Please choose one --</option>
+      <option value="Custom Design">Custom Design</option>
+      <option value="Sponsorship">Sponsorship</option>
+      <option value="Other">Other</option>
+    </select>
+  </label>
+  <label>Tell me more about your idea or request:
+    <textarea name="message" required></textarea>
+  </label>
+  <button type="submit">Send Message 💌</button>
 </form>
+
 
 <p class="muted">
   I’ll reply to your email as soon as possible.  
