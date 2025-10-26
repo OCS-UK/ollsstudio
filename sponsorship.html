@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Sponsorship — Olls Creative Studio</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-  <header class="header">
-    <div class="container">
-      <img src="assets/logo.png" alt="Olls Creative Studio Logo" class="logo">
-      <nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/placeholder.jpg" alt="Olls Creative Studio" class="logo">
+        <span class="brand-name">Olls Creative Studio</span>
+      </a>
+      <nav class="nav">
         <a href="index.html">Home</a>
-        <a href="examples.html">Examples</a>
+        <a href="products.html">Products</a>
         <a href="about.html">About</a>
         <a href="sponsorship.html">Sponsorship</a>
         <a href="contact.html">Contact</a>
@@ -22,40 +24,56 @@
     </div>
   </header>
 
-  <main class="container">
-    <section style="padding:60px 20px;">
-      <h1>Sponsorship & Collaborations</h1>
-      <p>
-        I love working with other creators, small businesses, and brands that share the same passion for creativity and gentle design.
-      </p>
+  <main class="container sponsorship-page">
+    <h1>Work with Olls Creative Studio</h1>
+    <p class="lead">
+      I love collaborating with small businesses, creators, and brands.  
+      Whether you’re looking for a custom Canva template, printable bundle, or creative promotion — let’s work together!
+    </p>
 
-      <h2>Ways We Can Work Together</h2>
-      <ul>
-        <li><strong>Sponsored Products</strong> — Let me design something with your brand’s style in mind.</li>
-        <li><strong>Collaborations</strong> — Work together on creative projects or bundle designs.</li>
-        <li><strong>Social Media Features</strong> — I can feature your brand or co-create posts to reach new audiences.</li>
-      </ul>
-
-      <p>
-        I’m open to creative partnerships that make both our brands shine 🌸
-      </p>
-
-      <div style="text-align:center; margin-top:40px;">
-        <a href="contact.html" class="btn" style="
-          background-color:#f9cfe0;
-          color:#333;
-          padding:12px 25px;
-          border-radius:30px;
-          text-decoration:none;
-          font-weight:600;
-          transition:all 0.3s ease;
-        ">Get in Touch</a>
+    <section class="sponsorship-types">
+      <div class="grid-2">
+        <div class="card">
+          <h3>✨ Brand Collaborations</h3>
+          <p>Let’s design something that fits your brand aesthetic — from planners to posters to digital downloads.</p>
+        </div>
+        <div class="card">
+          <h3>🤝 Sponsorship Features</h3>
+          <p>Want to sponsor a design drop or content series?  
+          I offer creative cross-promotions and shared design bundles.</p>
+        </div>
       </div>
+
+      <p style="margin-top:20px;">
+        Ready to collaborate?  
+        <a class="btn primary" href="contact.html?type=sponsorship">Send a Sponsorship Request 💌</a>
+      </p>
     </section>
   </main>
 
-  <footer>
-    <p>© 2025 Olls Creative Studio — Made with love ♡</p>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Olls Creative Studio</strong>
+        <p>Designed with love — follow us on social media.</p>
+      </div>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">Etsy</a>
+        <a href="#">Canva</a>
+      </div>
+    </div>
   </footer>
+
+  <script>
+    // Pre-select "Sponsorship" option if coming from sponsorship page
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("type") === "sponsorship") {
+      window.addEventListener("load", () => {
+        const select = document.querySelector('select[name="type"]');
+        if (select) select.value = "Sponsorship";
+      });
+    }
+  </script>
 </body>
 </html>
