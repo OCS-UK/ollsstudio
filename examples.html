@@ -9,53 +9,52 @@
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container header-inner" style="text-align:center; padding:20px;">
-      <img src="logo.png" alt="Olls Creative Studio Logo" style="width:150px;">
-      <h1>Olls Creative Studio</h1>
-    </div>
-
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="examples.html" class="active">Examples</a>
-      <a href="about.html">About</a>
-      <a href="sponsorship.html">Sponsorship</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <!-- ✅ Same header as the home page -->
+  <header style="text-align:center; padding:20px;">
+    <img src="logo.png" alt="Olls Creative Studio Logo" style="width:150px;">
   </header>
 
-  <main class="container examples-page">
-    <section class="intro">
-      <h2>Design Examples ✨</h2>
-      <p>Here are a few examples of the kinds of designs I can create — from printable planners to soft, aesthetic templates. Each design is crafted with gentle colours, clean structure, and a calm creative feel.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="examples.html" class="active">Examples</a>
+    <a href="about.html">About</a>
+    <a href="sponsorship.html">Sponsorship</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container">
+    <section style="padding:60px 20px;">
+      <h1>Examples of My Work</h1>
+      <p>
+        Here are a few examples of the kind of designs I can make for you.  
+        Each one starts with your idea — I’ll bring it to life in a soft, aesthetic Canva design.
+      </p>
     </section>
 
     <!-- 🖼️ Example Designs -->
-    <section class="gallery">
-      <div class="image-grid">
-        <div class="card">
-          <img src="poster1.png" alt="Planner Design Example">
-          <h3>Minimal Planner</h3>
-          <p>Clean layouts designed to help you plan your day with ease.</p>
-        </div>
+    <section style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:20px; padding:20px;">
+      <div style="text-align:center;">
+        <img src="poster1.png" alt="Planner Design Example" style="width:100%; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <h3>Minimal Planner</h3>
+        <p>Organise your week with clean, calm designs.</p>
+      </div>
 
-        <div class="card">
-          <img src="poster2.png" alt="Tracker Design Example">
-          <h3>Habit Tracker</h3>
-          <p>Stay motivated with a gentle, minimal tracking template.</p>
-        </div>
+      <div style="text-align:center;">
+        <img src="poster2" alt="Tracker Design Example" style="width:100%; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <h3>Habit Tracker</h3>
+        <p>Stay on track with soft, aesthetic layouts.</p>
+      </div>
 
-        <div class="card">
-          <img src="poster3.png" alt="Poster Example">
-          <h3>Motivational Poster</h3>
-          <p>Printable digital art with calming tones and inspiring text.</p>
-        </div>
+      <div style="text-align:center;">
+        <img src="poster3.png" alt="Poster Example" style="width:100%; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <h3>Motivational Poster</h3>
+        <p>Printable designs with inspiring quotes and gentle tones.</p>
+      </div>
 
-        <div class="card">
-          <img src="poster4.png" alt="Creative Layout Example">
-          <h3>Creative Layout</h3>
-          <p>Aesthetic Canva design for personal or brand use.</p>
-        </div>
+      <div style="text-align:center;">
+        <img src="poster4.png" alt="Creative Layout Example" style="width:100%; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
+        <h3>Creative Layout</h3>
+        <p>Custom Canva creations for brands or personal use.</p>
       </div>
     </section>
   </main>
