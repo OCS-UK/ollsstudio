@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olls Creative Studio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples — Olls Creative Studio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
-<header style="text-align:center; padding:20px;">
-  <img src="LOGO.png" alt="Olls Creative Studio Logo" style="width:150px;">
-</header>
+  <header class="site-header">
+    <div class="container header-inner" style="text-align:center; padding:20px;">
+      <img src="logo.png" alt="Olls Creative Studio Logo" style="width:150px;">
+      <h1>Olls Creative Studio</h1>
+    </div>
 
-<nav style="text-align:center; padding:10px 0; background-color:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
-  <a href="index.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Home</a>
-  <a href="examples.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Examples</a>
-  <a href="about.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">About</a>
-  <a href="sponsorship.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Sponsorship</a>
-  <a href="contact.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Contact</a>
-</nav>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="examples.html" class="active">Examples</a>
+      <a href="about.html">About</a>
+      <a href="sponsorship.html">Sponsorship</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
+  <main class="container examples-page">
+    <section class="intro">
+      <h2>Design Examples ✨</h2>
+      <p>Here are a few examples of the kinds of designs I can create — from printable planners to soft, aesthetic templates. Each design is crafted with gentle colours, clean structure, and a calm creative feel.</p>
+    </section>
 
-  <main class="container">
-    <section style="padding:60px 20px;">
-      <h1>Examples of My Work</h1>
-      <p>
-        Here are a few examples of the kind of designs I can make for you.  
-        Each one starts with your idea — I’ll bring it to life in a soft, aesthetic Canva design.
-      </p>
-
-      <div class="grid">
+    <!-- 🖼️ Example Designs -->
+    <section class="gallery">
+      <div class="image-grid">
         <div class="card">
-          <img src="assets/example1.jpg" alt="Example Planner" style="width:100%; border-radius:10px;">
-          <h3>Minimal Daily Planner</h3>
-          <p>A clean, elegant daily layout designed for productivity.</p>
+          <img src="poster1.png" alt="Planner Design Example">
+          <h3>Minimal Planner</h3>
+          <p>Clean layouts designed to help you plan your day with ease.</p>
         </div>
 
         <div class="card">
-          <img src="poster2"  style="width:100%; border-radius:10px;">
+          <img src="poster2.png" alt="Tracker Design Example">
           <h3>Habit Tracker</h3>
-          <p>Track habits or goals with gentle pastel design elements.</p>
+          <p>Stay motivated with a gentle, minimal tracking template.</p>
         </div>
 
         <div class="card">
-          <img src="poster1"  style="width:100%; border-radius:10px;">
+          <img src="poster3.png" alt="Poster Example">
           <h3>Motivational Poster</h3>
-          <p>Typography print with a soft, calming background.</p>
+          <p>Printable digital art with calming tones and inspiring text.</p>
         </div>
-        <div style="text-align:center; margin-top:40px;">
-  <a href="contact.html" class="btn" style="
-    background-color:#f9cfe0;
-    color:#333;
-    padding:12px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:600;
-    transition:all 0.3s ease;
-  ">Let's Make Yours!</a>
-     </div>
+
+        <div class="card">
+          <img src="poster4.png" alt="Creative Layout Example">
+          <h3>Creative Layout</h3>
+          <p>Aesthetic Canva design for personal or brand use.</p>
+        </div>
+      </div>
     </section>
   </main>
 
