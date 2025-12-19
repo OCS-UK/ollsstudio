@@ -1,144 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Website Design | Olls Creative Studio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-<meta name="theme-color" content="#020617">
 
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
 </head>
 
 <body>
 
- <header class="ocs-header">
-  <div class="ocs-header-inner">
-
-    <a href="index.html" class="ocs-brand">
-      <img src="LOGO.png" alt="Olls Creative Studio logo">
-      <div>
-        <strong>OLLS CREATIVE STUDIO</strong>
-        <span>Websites • Apps • Digital Products</span>
+  <!-- ✅ CANONICAL HEADER -->
+  <header class="site-header glass-header">
+    <div class="header-inner">
+      <div class="brand-pill">
+        <img src="LOGO.png" alt="Olls Creative Studio Logo">
+        <div class="brand-text">
+          <strong>OLLS CREATIVE STUDIO</strong>
+          <span>Websites • Apps • Digital Products</span>
+        </div>
       </div>
-    </a>
 
-    <nav class="ocs-nav">
-      <a href="index.html">Home</a>
-      <a href="examples.html">Work</a>
-      <a href="smartstudy.html">SmartStudy</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
-    </nav>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="examples.html">Work</a>
+        <a href="website.html">Website Design</a>
+        <a href="smartstudy.html">SmartStudy</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav-cta">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  </div>
-</header>
+  <!-- HERO -->
+  <section class="hero bg-grid bg-shapes">
+    <div class="hero-divider"></div>
+    <h1 class="hero-eyebrow">Website Design</h1>
+    <h2 class="hero-main">PROFESSIONAL WEBSITES</h2>
+    <p class="hero-sub">
+      Clean, modern websites that load fast, look premium, and actually convert.
+      Built properly — no shortcuts.
+    </p>
+    <a href="contact.html" class="btn">Start a website</a>
+  </section>
 
+  <!-- WHAT I BUILD -->
+  <section class="container case-study">
+    <h2>What I Build</h2>
 
-  <main style="padding:70px 20px; max-width:1000px; margin:auto;">
-
-    <!-- HERO -->
-    <section style="text-align:center; margin-bottom:70px;">
-      <h1>Professional Websites, Built Properly</h1>
-      <p style="color:#666; max-width:760px; margin:20px auto;">
-        I design and build clean, modern websites that are fast, responsive,
-        and easy to use. Whether you’re launching something new or need a
-        professional online presence, I’ll help you get it right.
-      </p>
-      <a href="contact.html" class="btn" style="padding:14px 26px;">Start a website</a>
-    </section>
-
-    <!-- SERVICES -->
-    <section>
-      <h2 style="text-align:center;">What I Build</h2>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:30px; margin-top:40px;">
-
-        <div class="card">
-          <h3>Custom Websites</h3>
-          <p>
-            Fully custom-built websites designed around your goals,
-            brand, and content — not templates.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Portfolio & Business Sites</h3>
-          <p>
-            Clean, professional layouts for individuals, creators,
-            and small businesses who need to be taken seriously online.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Landing Pages</h3>
-          <p>
-            Single-page websites designed to communicate clearly
-            and convert visitors into enquiries.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Easy to Maintain</h3>
-          <p>
-            Built to be simple to update and maintain,
-            with clear structure and long-term reliability.
-          </p>
-        </div>
-
+    <div class="grid" style="margin-top:32px;">
+      <div class="card">
+        <h3>Custom Websites</h3>
+        <p>Designed around your goals, brand, and content — not templates.</p>
       </div>
-    </section>
 
-    <!-- PROCESS -->
-    <section style="margin-top:80px;">
-      <h2 style="text-align:center;">How It Works</h2>
-
-      <div style="max-width:800px; margin:30px auto; color:#555;">
-        <ol style="line-height:1.9;">
-          <li><strong>Discovery:</strong> We discuss your idea, goals, and content.</li>
-          <li><strong>Design:</strong> I create a clean layout with clear structure and styling.</li>
-          <li><strong>Build:</strong> The site is developed, tested, and refined.</li>
-          <li><strong>Launch:</strong> Your website goes live with guidance on next steps.</li>
-        </ol>
+      <div class="card">
+        <h3>Portfolio & Business Sites</h3>
+        <p>Professional, clean layouts for creators and small businesses.</p>
       </div>
-    </section>
 
-    <!-- PRICING -->
-    <section style="margin-top:80px; text-align:center;">
-      <h2>Pricing</h2>
-      <p style="color:#666; margin-top:15px;">
-        Simple one-page websites start from <strong>£120</strong>.  
-        Multi-page or business websites typically start from <strong>£300+</strong>.
-      </p>
-      <p style="color:#888; margin-top:10px;">
-        Final pricing depends on size, features, and complexity.
-      </p>
-    </section>
+      <div class="card">
+        <h3>Landing Pages</h3>
+        <p>Single-page sites built for clarity and conversion.</p>
+      </div>
 
-    <!-- CTA -->
-    <section style="text-align:center; margin-top:90px;">
+      <div class="card">
+        <h3>Easy to Maintain</h3>
+        <p>Simple structure, clean files, long-term reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="metrics-strip">
+    <div class="metrics-grid">
+      <div><strong>1. Discovery</strong><span>Goals, content, vibe</span></div>
+      <div><strong>2. Design</strong><span>Clean layout + style</span></div>
+      <div><strong>3. Build</strong><span>Fast, responsive, tested</span></div>
+      <div><strong>4. Launch</strong><span>Live + support</span></div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="container case-study">
+    <h2>Pricing</h2>
+
+    <div class="grid" style="margin-top:32px;">
+      <div class="card">
+        <h3>Starter</h3>
+        <p>Simple one-page website</p>
+        <p style="margin-top:10px; color:white; font-weight:800;">From £120</p>
+      </div>
+
+      <div class="card">
+        <h3>Business</h3>
+        <p>Multi-page professional site</p>
+        <p style="margin-top:10px; color:white; font-weight:800;">From £300+</p>
+      </div>
+
+      <div class="card">
+        <h3>Custom</h3>
+        <p>Extra features, bespoke design, advanced pages</p>
+        <p style="margin-top:10px; color:white; font-weight:800;">Quote-based</p>
+      </div>
+    </div>
+
+    <p style="margin-top:18px; color: var(--grey);">
+      Final pricing depends on size, features, and complexity.
+    </p>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-inner">
       <h2>Ready to get started?</h2>
-      <p style="color:#666; max-width:650px; margin:15px auto;">
-        If you’re looking for a website that looks professional
-        and works properly, I’d be happy to help.
-      </p>
-      <a href="contact.html" class="btn" style="padding:14px 28px;">Get in touch</a>
-
-      <p style="margin-top:15px; color:#777;">
-        or email:  
-        <a href="mailto:contact.ollscreativestudio@gmail.com">
-          contact.ollscreativestudio@gmail.com
-        </a>
-      </p>
-    </section>
-
-  </main>
+      <p>If you want a website that looks premium and works properly, let’s talk.</p>
+      <a href="contact.html" class="btn">Get in touch</a>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-  <footer style="text-align:center; padding:25px; color:#777; font-size:0.95rem;">
-    <p>© 2025 Olls Creative Studio — Websites & Digital Products</p>
+  <footer class="site-footer">
+    <span>© 2025 Olls Creative Studio</span>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
