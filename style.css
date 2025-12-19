@@ -50,75 +50,94 @@ img {
 }
 
 /* ======================================================
-   HEADER + NAV (GLASS)
+   FINAL HEADER (BULLETPROOF)
 ====================================================== */
-.site-header {
+.ocs-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  backdrop-filter: blur(18px);
-  background: rgba(2, 6, 23, 0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(2, 6, 23, 0.75);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.header-inner {
+.ocs-header-inner {
   max-width: 1200px;
-  margin: auto;
-  padding: 18px 24px;
+  margin: 0 auto;
+  padding: 16px 20px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  gap: 24px;
 }
 
-.brand-pill {
+/* BRAND */
+.ocs-brand {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 14px 22px;
-  border-radius: 20px;
-  background: rgba(15,23,42,0.8);
-  box-shadow: 0 0 40px rgba(59,130,246,0.35);
+  gap: 12px;
+  text-decoration: none;
 }
 
-.brand-pill img {
-  width: 44px;
+.ocs-brand img {
+  width: 40px;
+  height: auto;
 }
 
-.brand-text strong {
-  font-size: 0.9rem;
+.ocs-brand strong {
+  display: block;
+  font-size: 0.85rem;
   letter-spacing: 0.14em;
+  color: white;
 }
 
-.brand-text span {
+.ocs-brand span {
   display: block;
   font-size: 0.65rem;
-  color: var(--grey);
   letter-spacing: 0.16em;
+  color: var(--grey);
   text-transform: uppercase;
 }
 
-.main-nav {
+/* NAV */
+.ocs-nav {
   display: flex;
-  gap: 22px;
   align-items: center;
+  gap: 20px;
 }
 
-.main-nav a {
+.ocs-nav a {
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--grey);
 }
 
-.main-nav a:hover {
-  color: var(--white);
+.ocs-nav a:hover {
+  color: white;
 }
 
-.nav-cta {
-  padding: 10px 18px;
+.ocs-nav .nav-cta {
+  padding: 9px 16px;
   border-radius: 999px;
   background: linear-gradient(135deg,var(--pink),var(--purple));
   color: white;
-  box-shadow: 0 0 25px rgba(139,92,246,0.45);
+  box-shadow: 0 0 18px rgba(139,92,246,0.45);
 }
+
+/* MOBILE FIX */
+@media (max-width: 900px) {
+  .ocs-header-inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ocs-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+}
+
 
 /* ======================================================
    HERO
