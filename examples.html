@@ -5,145 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work | Olls Creative Studio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header style="text-align:center; padding:20px;">
-    <img src="LOGO.png" alt="Olls Creative Studio Logo" style="width:150px;">
-  </header>
-
-  <!-- NAV -->
-  <nav style="text-align:center; padding:10px 0; background-color:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
-    <a href="index.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Home</a>
-    <a href="examples.html" style="margin:0 15px; text-decoration:none; color:#000; font-weight:700;">Work</a>
-    <a href="about.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">About</a>
-    <a href="sponsorship.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Sponsorship</a>
-    <a href="website.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Website Maker</a>
-    <a href="contact.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Contact</a>
-  </nav>
-
-  <!-- INTRO -->
-  <main>
-    <section style="text-align:center; padding:60px 20px;">
-      <h1>Selected Work</h1>
-      <p style="max-width:700px; margin:15px auto; color:#666;">
-        I design and build modern websites and mobile apps.  
-        Each project focuses on clean design, usability, and real-world performance.
-      </p>
-    </section>
-
-    <!-- FEATURED PROJECT -->
-    <section style="max-width:1000px; margin:0 auto 60px; padding:0 20px;">
-      <div style="border-radius:16px; padding:30px; background:#f7f7f7;">
-        <h2>SmartStudy</h2>
-        <p style="color:#777; font-weight:600;">Mobile App · Web App · EdTech</p>
-
-        <p style="margin-top:15px;">
-          SmartStudy is an AI-powered study companion designed to help GCSE students
-          revise smarter, track progress, and improve exam performance.
-        </p>
-
-        <ul style="margin:20px 0; padding-left:20px; color:#555;">
-          <li>Cross-platform app (iOS, Android, Web)</li>
-          <li>AI-powered explanations and revision support</li>
-          <li>Progress tracking and performance insights</li>
-          <li>Exam-board focused (AQA, OCR, Edexcel)</li>
-        </ul>
-
-        <p><strong>Status:</strong> In active development</p>
-        <p><strong>My role:</strong> Product design, UI/UX, frontend & backend development</p>
-        <p><strong>Tech:</strong> React Native (Expo), TypeScript, FastAPI</p>
-
-        <p style="margin-top:15px; color:#888; font-size:0.9em;">
-          Private project — public preview coming soon
-        </p>
+<header class="site-header glass-header">
+  <div class="header-inner">
+    <div class="brand-pill">
+      <img src="LOGO.png" alt="Logo">
+      <div class="brand-text">
+        <strong>OLLS CREATIVE STUDIO</strong>
+        <span>Websites • Apps • Digital Products</span>
       </div>
-    </section>
+    </div>
 
-    <!-- PROJECT GRID -->
-    <section style="max-width:1000px; margin:0 auto; padding:0 20px;">
-      <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:25px;">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="examples.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="smartstudy.html">SmartStudy</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <!-- PROJECT 1 -->
-        <div style="padding:25px; border-radius:14px; background:#fff; box-shadow:0 5px 20px rgba(0,0,0,0.05);">
-          <h3>Olls Creative Studio Website</h3>
-          <p style="color:#777; font-weight:600;">Website · Branding · UI</p>
+<section class="hero bg-grid">
+  <div class="hero-divider"></div>
+  <h1 class="hero-main">Selected Work</h1>
+  <p class="hero-sub">
+    A small selection of projects focused on clarity,
+    performance, and real-world use.
+  </p>
+</section>
 
-          <p style="margin-top:10px;">
-            A clean, modern portfolio website designed to showcase digital services,
-            projects, and creative direction.
-          </p>
-
-          <ul style="margin-top:10px; padding-left:20px; color:#555;">
-            <li>Responsive layout</li>
-            <li>Minimal, modern design</li>
-            <li>Fast-loading static build</li>
-          </ul>
-
-          <p style="margin-top:10px;"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-        </div>
-
-        <!-- PROJECT 2 -->
-        <div style="padding:25px; border-radius:14px; background:#fff; box-shadow:0 5px 20px rgba(0,0,0,0.05);">
-          <h3>Habit Tracker App (Concept)</h3>
-          <p style="color:#777; font-weight:600;">App UI · UX · Concept</p>
-
-          <p style="margin-top:10px;">
-            A mobile app concept focused on habit building, simplicity,
-            and clean user interaction.
-          </p>
-
-          <ul style="margin-top:10px; padding-left:20px; color:#555;">
-            <li>Minimal UI</li>
-            <li>User-focused flow</li>
-            <li>Scalable app structure</li>
-          </ul>
-
-          <p style="margin-top:10px;"><strong>Focus:</strong> UI/UX design & app structure</p>
-        </div>
-
-        <!-- PROJECT 3 -->
-        <div style="padding:25px; border-radius:14px; background:#fff; box-shadow:0 5px 20px rgba(0,0,0,0.05);">
-          <h3>Local Business Website (Concept)</h3>
-          <p style="color:#777; font-weight:600;">Website · UX · Concept</p>
-
-          <p style="margin-top:10px;">
-            A modern website concept for a local business,
-            designed to be mobile-first and conversion-focused.
-          </p>
-
-          <ul style="margin-top:10px; padding-left:20px; color:#555;">
-            <li>Clear calls to action</li>
-            <li>Professional layout</li>
-            <li>Client-ready structure</li>
-          </ul>
-
-          <p style="margin-top:10px;"><strong>Focus:</strong> Layout, UX, usability</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- CTA -->
-    <section style="text-align:center; padding:70px 20px;">
-      <h2>Have an idea?</h2>
-      <p style="max-width:600px; margin:15px auto; color:#666;">
-        Whether it’s a website or an app, I can help turn your idea into a real digital product.
+<section class="container">
+  <div class="grid">
+    <div class="card">
+      <h3>SmartStudy</h3>
+      <p>
+        A student-led EdTech platform designed to help students
+        revise smarter and track real progress.
       </p>
-      <a href="contact.html" style="display:inline-block; margin-top:15px; padding:12px 26px; border-radius:30px; background:#000; color:#fff; text-decoration:none;">
-        Get in touch
-      </a>
-    </section>
+      <a href="smartstudy.html" class="btn">View Project</a>
+    </div>
 
-  </main>
+    <div class="card">
+      <h3>Client Websites</h3>
+      <p>
+        Clean, modern websites built for small businesses
+        and individuals.
+      </p>
+      <p><em>Available on request</em></p>
+    </div>
 
-  <!-- FOOTER -->
-  <footer style="text-align:center; padding:20px; font-size:0.9em; color:#888;">
-    <p>© 2025 Olls Creative Studio — Designed & built by Olls Creative Studio</p>
-  </footer>
+    <div class="card">
+      <h3>Experimental Builds</h3>
+      <p>
+        UI experiments, layouts, and concept builds
+        exploring modern web design.
+      </p>
+    </div>
+  </div>
+</section>
 
+<footer class="site-footer">
+  <span>© 2025 Olls Creative Studio</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
