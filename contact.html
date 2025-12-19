@@ -1,73 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Olls Creative Studio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="favicon.png">
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header style="text-align:center; padding:20px;">
-    <img src="LOGO.png" alt="Olls Creative Studio Logo" style="width:150px;">
-  </header>
+<header class="site-header glass-header">
+  <div class="header-inner">
+    <div class="brand-pill">
+      <img src="LOGO.png">
+      <div class="brand-text">
+        <strong>OLLS CREATIVE STUDIO</strong>
+        <span>Websites • Apps • Digital Products</span>
+      </div>
+    </div>
 
-  <!-- NAV -->
-  <nav style="text-align:center; padding:10px 0; background-color:#fff; box-shadow:0 2px 5px rgba(0,0,0,0.05);">
-    <a href="index.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Home</a>
-    <a href="examples.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Work</a>
-    <a href="about.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">About</a>
-    <a href="sponsorship.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Sponsorship</a>
-    <a href="website.html" style="margin:0 15px; text-decoration:none; color:#555; font-weight:600;">Website Design</a>
-    <a href="contact.html" style="margin:0 15px; text-decoration:none; color:#000; font-weight:700;">Contact</a>
-  </nav>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="examples.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="smartstudy.html">SmartStudy</a>
+      <a href="contact.html" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- MAIN -->
-  <main class="container contact-page" style="padding:60px 20px; max-width:700px; margin:auto;">
-    <h1>Get in touch</h1>
-    <p class="lead" style="color:#666; margin-top:10px;">
-      If you have an idea, a project in mind, or a general enquiry,
-      feel free to send a message using the form below.
-    </p>
+<section class="hero bg-grid">
+  <div class="hero-divider"></div>
+  <h1 class="hero-main">Get in Touch</h1>
+  <p class="hero-sub">
+    If you have a project, idea, or question —
+    let’s talk.
+  </p>
+</section>
 
-    <form action="https://formspree.io/f/mnnoqanq" method="POST" class="contact-form" style="margin-top:40px;">
+<section class="container">
+  <div class="card">
+    <form action="https://formspree.io/f/mnnoqanq" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
 
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Your name" required>
-
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="Your email address" required>
-
-      <label for="subject">Enquiry type</label>
-      <select id="subject" name="subject" required>
-        <option value="">Select an option</option>
-        <option value="Website Project">Website project</option>
-        <option value="App Project">App project</option>
-        <option value="Sponsorship / Partnership">Sponsorship or partnership</option>
-        <option value="General Enquiry">General enquiry</option>
+      <select name="subject">
+        <option>General Enquiry</option>
+        <option>Website Project</option>
+        <option>SmartStudy Enquiry</option>
       </select>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="6" placeholder="Tell me a bit about your idea or project" required></textarea>
+      <textarea name="message" rows="6" placeholder="Your message"></textarea>
 
-      <button type="submit" class="big-send-btn">Send message</button>
+      <button type="submit" class="btn">Send Message</button>
     </form>
+  </div>
+</section>
 
-    <p style="margin-top:25px; color:#777; font-size:0.9em;">
-      Alternatively, you can email directly at  
-      <a href="mailto:contact.ollscreativestudio@gmail.com">
-        contact.ollscreativestudio@gmail.com
-      </a>
-    </p>
-  </main>
+<footer class="site-footer">
+  <span>© 2025 Olls Creative Studio</span>
+</footer>
 
-  <!-- FOOTER -->
-  <footer style="text-align:center; padding:20px; font-size:0.9em; color:#888;">
-    <p>© 2025 Olls Creative Studio — Designed & built by Olls Creative Studio</p>
-  </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
