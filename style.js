@@ -14,3 +14,10 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 items.forEach(item => observer.observe(item));
+
+// Sticky header shadow
+const header = document.querySelector(".glass-header");
+window.addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", window.scrollY > 20);
+});
+
