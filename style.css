@@ -1,262 +1,278 @@
-/* 🌸 Olls Creative Studio — Soft Pastel Theme */
-
+/* ======================================================
+   BRAND SYSTEM
+====================================================== */
 :root {
-  --bg: #fcfbfa;
-  --text: #333;
-  --accent: #f7cad0;   /* pastel pink */
-  --accent2: #cde8f2;  /* pastel blue */
-  --card: #ffffff;
-  --radius: 14px;
+  --pink: #ec4899;
+  --purple: #8b5cf6;
+  --blue: #3b82f6;
+  --green: #22c55e;
+
+  --dark: #0f172a;
+  --grey: #64748b;
+  --bg: #f8fafc;
+  --white: #ffffff;
 }
+
+/* DARK MODE */
+body.dark {
+  --bg: #020617;
+  --dark: #e5e7eb;
+  --grey: #94a3b8;
+  --white: #020617;
+}
+
+/* ======================================================
+   RESET + BASE
+====================================================== */
+* { box-sizing: border-box; }
 
 body {
-  font-family: 'Inter', sans-serif;
   margin: 0;
   background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
+  color: var(--dark);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.65;
+  animation: pageFade 0.8s ease;
 }
+
+img { max-width: 100%; display: block; }
 
 .container {
-  width: 90%;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: auto;
+  padding: 0 20px;
 }
 
-/* Header */
-.header {
-  background: white;
-  padding: 15px 0;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  position: sticky;
-  top: 0;
-  z-index: 10;
+/* ======================================================
+   TYPOGRAPHY
+====================================================== */
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  background: linear-gradient(90deg,var(--pink),var(--purple),var(--blue));
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.logo {
-  height: 48px;
-  vertical-align: middle;
-  border-radius: var(--radius);
+h2 { font-size: 2.1rem; color: var(--purple); }
+h3 { font-size: 1.25rem; color: var(--blue); }
+p  { color: var(--grey); }
+
+/* ======================================================
+   ANIMATIONS
+====================================================== */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
-.header nav {
-  float: right;
-  margin-top: 10px;
+@keyframes pageFade {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.header nav a {
-  text-decoration: none;
-  color: #444;
-  margin-left: 18px;
-  font-weight: 600;
+@keyframes floatShape {
+  from { transform: translate(0,0); }
+  to   { transform: translate(40px,-40px); }
 }
 
-.header nav a:hover {
-  color: #000;
+/* ======================================================
+   NAV
+====================================================== */
+nav a {
+  position: relative;
 }
 
-/* Hero section */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg,var(--pink),var(--purple));
+  transition: width .25s ease;
+  border-radius: 10px;
+}
+
+nav a:hover::after { width: 100%; }
+
+/* ======================================================
+   HERO
+====================================================== */
 .hero {
+  position: relative;
+  padding: 100px 20px;
   text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  border-radius: 0 0 40px 40px;
-  color: #222;
+  overflow: hidden;
 }
 
-.hero h1 {
-  font-size: 2.4em;
-  margin-bottom: 10px;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(
+    circle,
+    rgba(236,72,153,.25),
+    rgba(139,92,246,.20),
+    rgba(59,130,246,.15),
+    transparent 70%
+  );
+  animation: pulseGlow 10s ease-in-out infinite;
+  z-index: 0;
 }
 
-.hero p {
-  font-size: 1.1em;
-  max-width: 600px;
-  margin: 0 auto 20px;
+.hero * { position: relative; z-index: 1; }
+
+@keyframes pulseGlow {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
 
-.btn {
-  background: white;
-  color: #222;
-  padding: 12px 20px;
-  border-radius: var(--radius);
-  text-decoration: none;
+/* ======================================================
+   FLOATING BACKGROUND SHAPES
+====================================================== */
+.bg-shapes::before,
+.bg-shapes::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: .25;
+  animation: floatShape 18s infinite alternate ease-in-out;
+  z-index: 0;
+}
+
+.bg-shapes::before {
+  background: var(--pink);
+  top: -120px;
+  left: -120px;
+}
+
+.bg-shapes::after {
+  background: var(--blue);
+  bottom: -120px;
+  right: -120px;
+}
+
+/* ======================================================
+   BUTTONS
+====================================================== */
+.btn,
+.big-send-btn {
+  background: linear-gradient(135deg,var(--pink),var(--purple));
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 999px;
+  border: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform .2s ease, box-shadow .2s ease;
+  box-shadow: 0 14px 35px rgba(139,92,246,.35);
 }
 
-.btn:hover {
-  background: #222;
-  color: white;
+.btn:hover,
+.big-send-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 22px 55px rgba(139,92,246,.5);
 }
 
-/* Intro cards */
-.intro {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.intro h2 {
-  margin-bottom: 40px;
-  font-size: 1.8em;
-}
-
+/* ======================================================
+   GRID + CARDS
+====================================================== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 32px;
 }
 
 .card {
-  background: var(--card);
-  padding: 25px;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 14px 40px rgba(15,23,42,.08);
+  transition: transform .3s ease, box-shadow .3s ease;
+  border-top: 6px solid var(--purple);
 }
+
+.card:nth-child(2){ border-top-color: var(--blue); }
+.card:nth-child(3){ border-top-color: var(--green); }
+.card:nth-child(4){ border-top-color: var(--pink); }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  box-shadow: 0 24px 70px rgba(15,23,42,.16);
 }
 
-footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 40px;
-  background: #fff;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  font-size: 0.9em;
-  color: #555;
-}
-
-
-/* 🌸 Contact form styling */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 500px;
-  margin: 2rem auto;
-  background: #fff;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-label {
-  display: flex;
-  flex-direction: column;
+/* ======================================================
+   FORMS
+====================================================== */
+.contact-form label {
   font-weight: 600;
-  color: #444;
-  font-size: 0.9rem;
-}
-
-input,
-select,
-textarea {
-  margin-top: 5px;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-textarea {
-  min-height: 100px;
-  resize: vertical;
-}
-
-.big-send-btn {
+  margin-top: 18px;
   display: block;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
   width: 100%;
-  background: linear-gradient(90deg, #f7c5d8, #cde7f0);
-  color: #222;
-  font-weight: 700;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 12px;
+  margin-top: 6px;
   padding: 14px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 16px;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  font-family: inherit;
+  transition: all .2s ease;
 }
 
-.big-send-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+  outline: none;
+  border-color: var(--purple);
+  box-shadow: 0 0 0 5px rgba(139,92,246,.18);
 }
 
-
-/* 🌸 Clean Header Style for Olls Creative Studio */
-.main-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  background: #fff8f9;
-  border-bottom: 1px solid #f1d5da;
+/* ======================================================
+   SCROLL ANIMATIONS
+====================================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: .7s ease;
 }
 
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.logo-area img {
-  height: 40px;
-  border-radius: 8px;
+/* ======================================================
+   FOOTER
+====================================================== */
+footer {
+  background: linear-gradient(
+    135deg,
+    rgba(236,72,153,.12),
+    rgba(139,92,246,.12),
+    rgba(59,130,246,.12)
+  );
+  text-align: center;
+  padding: 28px;
+  color: var(--grey);
 }
 
-.logo-area h2 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #333;
-}
-
-.nav-links a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #333;
-  font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.nav-links a:hover {
-  color: #e5738a;
-}
-
-.nav-links .active {
-  color: #e5738a;
-  font-weight: 600;
-}
-
-.form-box {
-  background: #fff;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-  margin-top: 30px;
-}
-
-.form-box h3 {
-  margin-top: 20px;
-  font-weight: 600;
-  color: #333;
-}
-
-.button-pink {
-  display: inline-block;
-  background-color: #f9b5c3;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.button-pink:hover {
-  background-color: #f48fa8;
+/* ======================================================
+   MOBILE
+====================================================== */
+@media (max-width:600px){
+  h1{ font-size:2.2rem; }
+  h2{ font-size:1.8rem; }
 }
