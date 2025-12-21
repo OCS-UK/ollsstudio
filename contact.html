@@ -38,38 +38,100 @@
 </header>
 
 
-<section class="hero bg-grid">
-  <div class="hero-divider"></div>
-  <h1 class="hero-main">Get in Touch</h1>
-  <p class="hero-sub">
-    If you have a project, idea, or question —
-    let’s talk.
-  </p>
-</section>
+<!-- HERO -->
+  <section class="hero bg-grid bg-shapes">
+    <div class="hero-divider"></div>
 
-<section class="container">
-  <div class="card">
-    <form action="https://formspree.io/f/mnnoqanq" method="POST">
-      <input type="text" name="name" placeholder="Your name" required>
-      <input type="email" name="email" placeholder="Your email" required>
+    <h1 class="hero-eyebrow">Contact</h1>
+    <h2 class="hero-main">LET’S BUILD</h2>
 
-      <select name="subject">
-        <option>General Enquiry</option>
-        <option>Website Project</option>
-        <option>SmartStudy Enquiry</option>
-      </select>
+    <p class="hero-sub">
+      Send your idea, project, or question below.
+      I’ll reply as soon as possible.
+    </p>
+  </section>
 
-      <textarea name="message" rows="6" placeholder="Your message"></textarea>
+  <!-- FORM -->
+  <section class="container" style="padding: 90px 0;">
+    <div class="grid">
 
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-  </div>
-</section>
+      <!-- Left info card -->
+      <div class="card">
+        <h3>What to include</h3>
+        <p style="margin-top:12px;">
+          To get the fastest response, include:
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 14px;">
+          • What you need (website, app, SmartStudy, other)<br>
+          • Any links or references you like<br>
+          • Deadline / timeframe (if you have one)<br>
+          • Budget range (optional)<br>
+        </p>
 
-<footer class="site-footer">
-  <span>© 2025 Olls Creative Studio</span>
-</footer>
+        <div style="margin-top:22px;">
+          <h3>Quick options</h3>
+          <p style="color: var(--grey); margin-top:10px; line-height: 1.9;">
+            • Website build enquiry<br>
+            • SmartStudy enquiry<br>
+            • General question<br>
+            • Sponsorship / partnership<br>
+          </p>
+        </div>
+      </div>
 
-<script src="script.js"></script>
+      <!-- Form card -->
+      <div class="card">
+        <h3>Send a message</h3>
+
+        <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form" style="margin-top:18px;">
+          <label for="name" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Oliver Scudder" required>
+
+          <label for="email" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+
+          <label for="subject" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose one</option>
+            <option value="Website Enquiry">Website Enquiry</option>
+            <option value="SmartStudy Enquiry">SmartStudy Enquiry</option>
+            <option value="Sponsorship / Partnership">Sponsorship / Partnership</option>
+            <option value="General Question">General Question</option>
+          </select>
+
+          <label for="message" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me what you want built..." required></textarea>
+
+          <button type="submit" class="btn" style="margin-top:18px; width:100%; text-align:center;">
+            Send Message
+          </button>
+        </form>
+
+        <p style="margin-top:14px; color: var(--grey); font-size: 0.9rem;">
+          By sending, you agree to be contacted back via email.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-inner">
+      <h2>Prefer a simple request?</h2>
+      <p>
+        Just tell me what you want, when you want it, and any style references.
+        I’ll handle the rest.
+      </p>
+      <a href="./examples.html" class="btn">View Work</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <span>© 2025 Olls Creative Studio</span>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>
