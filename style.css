@@ -439,3 +439,18 @@ img {
     gap: 12px;
   }
 }
+
+
+
+/* ===== HEADER OVERRIDE (NUCLEAR) ===== */
+.ocs-header{position:sticky!important;top:0!important;z-index:99999!important;background:rgba(2,6,23,.82)!important;backdrop-filter:blur(16px)!important;border-bottom:1px solid rgba(255,255,255,.08)!important}
+.ocs-header-inner{max-width:1200px!important;margin:0 auto!important;padding:14px 18px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:18px!important}
+.ocs-brand{display:flex!important;align-items:center!important;gap:12px!important;text-decoration:none!important}
+.ocs-brand img{width:42px!important;height:auto!important}
+.ocs-brand-text strong{display:block!important;color:#fff!important;font-size:.86rem!important;letter-spacing:.14em!important;line-height:1.2!important}
+.ocs-brand-text span{display:block!important;color:var(--grey,#94a3b8)!important;font-size:.64rem!important;letter-spacing:.16em!important;text-transform:uppercase!important;margin-top:4px!important;line-height:1.2!important}
+.ocs-nav{display:flex!important;align-items:center!important;gap:16px!important;flex-wrap:wrap!important;justify-content:flex-end!important}
+.ocs-nav a{color:var(--grey,#94a3b8)!important;font-weight:600!important;font-size:.92rem!important}
+.ocs-nav a:hover{color:#fff!important}
+.ocs-cta{padding:9px 16px!important;border-radius:999px!important;background:linear-gradient(135deg,var(--pink,#ec4899),var(--purple,#8b5cf6))!important;color:#fff!important;box-shadow:0 0 18px rgba(139,92,246,.45)!important}
+@media (max-width:900px){.ocs-header-inner{flex-direction:column!important;align-items:center!important}.ocs-nav{justify-content:center!important;gap:12px!important}}
