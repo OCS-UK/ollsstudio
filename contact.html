@@ -4,126 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Olls Creative Studio</title>
- <link rel="stylesheet" href="./style.css?v=10">
-<link rel="icon" type="image/png" href="./favicon.png">
-<link rel="apple-touch-icon" href="./favicon.png">
-<meta name="theme-color" content="#020617">
 
+  <link rel="stylesheet" href="./style.css?v=12">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <meta name="theme-color" content="#020617">
 </head>
 
 <body>
 
+  <!-- ✅ BULLETPROOF HEADER -->
   <header class="ocs-header">
-  <div class="ocs-header-inner">
+    <div class="ocs-header-inner">
 
-    <a class="ocs-brand" href="./index.html">
-      <img src="./LOGO.png" alt="Olls Creative Studio Logo">
-      <div class="ocs-brand-text">
-        <strong>OLLS CREATIVE STUDIO</strong>
-        <span>Websites • Apps • Digital Products</span>
-      </div>
-    </a>
+      <a class="ocs-brand" href="./index.html">
+        <img src="./LOGO.png" alt="Olls Creative Studio Logo">
+        <div class="ocs-brand-text">
+          <strong>OLLS CREATIVE STUDIO</strong>
+          <span>Websites • Apps • Digital Products</span>
+        </div>
+      </a>
 
-    <nav class="ocs-nav">
-      <a href="./index.html">Home</a>
+      <nav class="ocs-nav">
+        <a href="./index.html">Home</a>
+        <a href="./examples.html">Work</a>
+        <a href="./website.html">Website</a>
+        <a href="./smartstudy.html">SmartStudy</a>
         <a href="./about.html">About</a>
-      <a href="./examples.html">Work</a>
-      <a href="./website.html">Website</a>
-      <a href="./partnerships.html">Partnerships</a>
-      <a href="./smartstudy.html">SmartStudy</a>
-      <a href="./contact.html" class="ocs-cta">Contact</a>
-    </nav>
+        <a href="./sponsorship.html">Partnerships</a>
+        <a href="./contact.html" class="ocs-cta">Contact</a>
+      </nav>
 
-  </div>
-</header>
+    </div>
+  </header>
 
-
-<!-- HERO -->
+  <!-- HERO -->
   <section class="hero bg-grid bg-shapes">
     <div class="hero-divider"></div>
-
     <h1 class="hero-eyebrow">Contact</h1>
     <h2 class="hero-main">LET’S BUILD</h2>
-
     <p class="hero-sub">
-      Send your idea, project, or question below.
-      I’ll reply as soon as possible.
+      Choose a category, send your message, and I’ll reply as soon as possible.
+      Clean communication. Built properly.
     </p>
   </section>
 
-  <!-- FORM -->
-  <section class="container" style="padding: 90px 0;">
-    <div class="grid">
-
-      <!-- Left info card -->
-      <div class="card">
-        <h3>What to include</h3>
-        <p style="margin-top:12px;">
-          To get the fastest response, include:
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 14px;">
-          • What you need (website, app, SmartStudy, other)<br>
-          • Any links or references you like<br>
-          • Deadline / timeframe (if you have one)<br>
-          • Budget range (optional)<br>
-        </p>
-
-        <div style="margin-top:22px;">
-          <h3>Quick options</h3>
-          <p style="color: var(--grey); margin-top:10px; line-height: 1.9;">
-            • Website build enquiry<br>
-            • SmartStudy enquiry<br>
-            • General question<br>
-            • Sponsorship / partnership<br>
-          </p>
-        </div>
-      </div>
-
-      <!-- Form card -->
-      <div class="card">
-        <h3>Send a message</h3>
-
-        <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form" style="margin-top:18px;">
-          <label for="name" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Your name</label>
-          <input id="name" name="name" type="text" placeholder="BOB SMITH" required>
-
-          <label for="email" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Your email</label>
-          <input id="email" name="email" type="email" placeholder="you@email.com" required>
-
-          <label for="subject" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Subject</label>
-          <select id="subject" name="subject" required>
-            <option value="">Choose one</option>
-            <option value="Website Enquiry">Website Enquiry</option>
-            <option value="SmartStudy Enquiry">SmartStudy Enquiry</option>
-            <option value="Sponsorship / Partnership">Sponsorship / Partnership</option>
-            <option value="General Question">General Question</option>
-          </select>
-
-          <label for="message" style="display:block; margin:12px 0 6px; color: var(--grey); font-weight:600;">Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Tell me what you want built..." required></textarea>
-
-          <button type="submit" class="btn" style="margin-top:18px; width:100%; text-align:center;">
-            Send Message
-          </button>
-        </form>
-
-        <p style="margin-top:14px; color: var(--grey); font-size: 0.9rem;">
-          By sending, you agree to be contacted back via email.
-        </p>
-      </div>
-
+  <!-- CONTACT TABS -->
+  <section class="container" style="padding: 20px 0 0;">
+    <div class="contact-tabs" role="tablist" aria-label="Contact categories">
+      <button class="ctab active" data-cat="General Question" type="button">General</button>
+      <button class="ctab" data-cat="Website Enquiry — New Build" type="button">Websites</button>
+      <button class="ctab" data-cat="App Enquiry — New App" type="button">Apps</button>
+      <button class="ctab" data-cat="Tool Request — Tracker / Dashboard" type="button">Tools</button>
+      <button class="ctab" data-cat="Coding Course — Beginner (Ages 11–14)" type="button">Coding Courses</button>
+      <button class="ctab" data-cat="SmartStudy Enquiry — Feedback" type="button">SmartStudy</button>
+      <button class="ctab" data-cat="Sponsorship / Partnership" type="button">Partnerships</button>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="final-inner">
-      <h2>Prefer a simple request?</h2>
-      <p>
-        Just tell me what you want, when you want it, and any style references.
-        I’ll handle the rest.
-      </p>
-      <a href="./examples.html" class="btn">View Work</a>
+  <!-- FORM AREA -->
+  <section class="container" style="padding: 40px 0 100px;">
+    <div class="contact-layout">
+
+      <!-- LEFT: info / expectations -->
+      <div class="contact-panel">
+        <h3>What to include</h3>
+        <p>
+          To get the fastest response, include your goal, timeframe, and any examples you like.
+        </p>
+
+        <div class="contact-mini-grid">
+          <div class="mini">
+            <strong>Fast replies</strong>
+            <span>Clear, calm communication</span>
+          </div>
+          <div class="mini">
+            <strong>Built properly</strong>
+            <span>No shortcuts, no mess</span>
+          </div>
+          <div class="mini">
+            <strong>Modern style</strong>
+            <span>Neon/glass premium look</span>
+          </div>
+          <div class="mini">
+            <strong>UK-focused</strong>
+            <span>Perfect for local projects</span>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <strong>Quick tip:</strong>
+          <span>
+            If you want a quote, tell me the number of pages/screens and any features you need.
+          </span>
+        </div>
+      </div>
+
+      <!-- RIGHT: form -->
+      <div class="contact-form-card">
+        <h3>Send a message</h3>
+        <p class="small-muted">Use the tabs above to auto-select the subject.</p>
+
+        <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form">
+
+          <label for="name">Your name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required>
+
+          <label for="email">Your email</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" required>
+
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject" required>
+            <option value="">Choose a subject</option>
+
+            <option value="General Question">General Question</option>
+            <option value="Pricing / Quote Request">Pricing / Quote Request</option>
+            <option value="Support / Help">Support / Help</option>
+
+            <option value="Website Enquiry — New Build">Website Enquiry — New Build</option>
+            <option value="Website Enquiry — Redesign">Website Enquiry — Redesign</option>
+            <option value="Website Enquiry — Fix / Maintenance">Website Enquiry — Fix / Maintenance</option>
+            <option value="Website Enquiry — Add Features">Website Enquiry — Add Features</option>
+
+            <option value="App Enquiry — New App">App Enquiry — New App</option>
+            <option value="App Enquiry — Prototype / MVP">App Enquiry — Prototype / MVP</option>
+            <option value="App Enquiry — Improvements / Updates">App Enquiry — Improvements / Updates</option>
+
+            <option value="Tool Request — Tracker / Dashboard">Tool Request — Tracker / Dashboard</option>
+            <option value="Tool Request — Automation / Workflow">Tool Request — Automation / Workflow</option>
+            <option value="Tool Request — Custom Feature">Tool Request — Custom Feature</option>
+
+            <option value="SmartStudy Enquiry — Feedback">SmartStudy Enquiry — Feedback</option>
+            <option value="SmartStudy Enquiry — School / Teacher">SmartStudy Enquiry — School / Teacher</option>
+            <option value="SmartStudy Enquiry — Sponsor / Partner">SmartStudy Enquiry — Sponsor / Partner</option>
+
+            <option value="Coding Course — Beginner (Ages 8–11)">Coding Course — Beginner (Ages 8–11)</option>
+            <option value="Coding Course — Beginner (Ages 11–14)">Coding Course — Beginner (Ages 11–14)</option>
+            <option value="Coding Course — GCSE Computer Science">Coding Course — GCSE Computer Science</option>
+            <option value="Coding Course — Website Basics (HTML/CSS)">Coding Course — Website Basics (HTML/CSS)</option>
+            <option value="Coding Course — JavaScript Basics">Coding Course — JavaScript Basics</option>
+
+            <option value="Sponsorship / Partnership">Sponsorship / Partnership</option>
+            <option value="Brand Collaboration">Brand Collaboration</option>
+
+            <option value="Other">Other</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="7" placeholder="Tell me what you want built..." required></textarea>
+
+          <button type="submit" class="btn" style="width:100%; text-align:center; margin-top: 10px;">
+            Send Message
+          </button>
+
+          <p class="small-muted" style="margin-top: 12px;">
+            I’ll reply via email. Keep an eye on spam/junk just in case.
+          </p>
+        </form>
+      </div>
+
     </div>
   </section>
 
@@ -132,6 +171,30 @@
     <span>© 2025 Olls Creative Studio</span>
   </footer>
 
-  <script src="./script.js"></script>
+  <!-- tabs script -->
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll(".ctab");
+      const subject = document.getElementById("subject");
+      if (!tabs.length || !subject) return;
+
+      tabs.forEach(btn => {
+        btn.addEventListener("click", () => {
+          tabs.forEach(t => t.classList.remove("active"));
+          btn.classList.add("active");
+
+          const value = btn.getAttribute("data-cat") || "";
+          subject.value = value;
+
+          // If option not found (rare), set to "Other"
+          if (subject.value !== value) subject.value = "Other";
+        });
+      });
+
+      // default selection on load
+      subject.value = "General Question";
+    })();
+  </script>
+
 </body>
 </html>
