@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Olls Creative Studio</title>
 
-  <link rel="stylesheet" href="./style.css?v=12">
+  <link rel="stylesheet" href="./style.css?v=14">
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./favicon.png">
   <meta name="theme-color" content="#020617">
@@ -16,7 +16,6 @@
   <!-- ✅ BULLETPROOF HEADER -->
   <header class="ocs-header">
     <div class="ocs-header-inner">
-
       <a class="ocs-brand" href="./index.html">
         <img src="./LOGO.png" alt="Olls Creative Studio Logo">
         <div class="ocs-brand-text">
@@ -34,7 +33,6 @@
         <a href="./sponsorship.html">Partnerships</a>
         <a href="./contact.html" class="ocs-cta">Contact</a>
       </nav>
-
     </div>
   </header>
 
@@ -44,68 +42,58 @@
     <h1 class="hero-eyebrow">Contact</h1>
     <h2 class="hero-main">LET’S BUILD</h2>
     <p class="hero-sub">
-      Choose a category, send your message, and I’ll reply as soon as possible.
-      Clean communication. Built properly.
+      Pick a category, choose a type, then send the details.
     </p>
   </section>
 
-  <!-- CONTACT TABS -->
-  <section class="container" style="padding: 20px 0 0;">
-    <div class="contact-tabs" role="tablist" aria-label="Contact categories">
-      <button class="ctab active" data-cat="General Question" type="button">General</button>
-      <button class="ctab" data-cat="Website Enquiry — New Build" type="button">Websites</button>
-      <button class="ctab" data-cat="App Enquiry — New App" type="button">Apps</button>
-      <button class="ctab" data-cat="Tool Request — Tracker / Dashboard" type="button">Tools</button>
-      <button class="ctab" data-cat="Coding Course — Beginner (Ages 11–14)" type="button">Coding Courses</button>
-      <button class="ctab" data-cat="SmartStudy Enquiry — Feedback" type="button">SmartStudy</button>
-      <button class="ctab" data-cat="Sponsorship / Partnership" type="button">Partnerships</button>
+  <!-- MAIN TABS -->
+  <section class="container" style="padding: 18px 0 0;">
+    <div class="tabs" aria-label="Contact main categories">
+      <button class="tab-btn active" type="button" data-main="general">General</button>
+      <button class="tab-btn" type="button" data-main="website">Website</button>
+      <button class="tab-btn" type="button" data-main="app">App</button>
+      <button class="tab-btn" type="button" data-main="tool">Tool</button>
+      <button class="tab-btn" type="button" data-main="course">Coding Course</button>
+      <button class="tab-btn" type="button" data-main="smartstudy">SmartStudy</button>
+      <button class="tab-btn" type="button" data-main="partner">Partnership</button>
     </div>
   </section>
 
-  <!-- FORM AREA -->
-  <section class="container" style="padding: 40px 0 100px;">
-    <div class="contact-layout">
+  <!-- SUB TABS (changes depending on main tab) -->
+  <section class="container" style="padding: 16px 0 0;">
+    <div class="subtabs" id="subtabs" aria-label="Contact sub categories"></div>
+  </section>
 
-      <!-- LEFT: info / expectations -->
-      <div class="contact-panel">
+  <!-- FORM -->
+  <section class="container" style="padding: 40px 0 100px;">
+    <div class="contact-grid">
+
+      <div class="card contact-info">
         <h3>What to include</h3>
-        <p>
-          To get the fastest response, include your goal, timeframe, and any examples you like.
+        <p class="muted" style="margin-top:10px;">
+          Include your goal, timeframe, and any examples you like.
         </p>
 
-        <div class="contact-mini-grid">
-          <div class="mini">
-            <strong>Fast replies</strong>
-            <span>Clear, calm communication</span>
-          </div>
-          <div class="mini">
-            <strong>Built properly</strong>
-            <span>No shortcuts, no mess</span>
-          </div>
-          <div class="mini">
-            <strong>Modern style</strong>
-            <span>Neon/glass premium look</span>
-          </div>
-          <div class="mini">
-            <strong>UK-focused</strong>
-            <span>Perfect for local projects</span>
-          </div>
+        <div class="checklist">
+          <div class="check">✅ What you want built</div>
+          <div class="check">✅ Deadline / timeframe</div>
+          <div class="check">✅ Any references / examples</div>
+          <div class="check">✅ Features (optional)</div>
         </div>
 
-        <div class="contact-note">
-          <strong>Quick tip:</strong>
-          <span>
-            If you want a quote, tell me the number of pages/screens and any features you need.
-          </span>
+        <div class="glow-note">
+          <strong>Quick tip</strong>
+          <p class="muted" style="margin-top:6px;">
+            The clearer your message, the faster I can quote and plan.
+          </p>
         </div>
       </div>
 
-      <!-- RIGHT: form -->
-      <div class="contact-form-card">
+      <div class="card contact-form">
         <h3>Send a message</h3>
-        <p class="small-muted">Use the tabs above to auto-select the subject.</p>
+        <p class="muted" style="margin-top:6px;">The tabs auto-fill your subject.</p>
 
-        <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form">
+        <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form" style="margin-top:16px;">
 
           <label for="name">Your name</label>
           <input id="name" name="name" type="text" placeholder="Your name" required>
@@ -113,52 +101,19 @@
           <label for="email">Your email</label>
           <input id="email" name="email" type="email" placeholder="you@email.com" required>
 
+          <!-- SUBJECT (auto-filled) -->
           <label for="subject">Subject</label>
-          <select id="subject" name="subject" required>
-            <option value="">Choose a subject</option>
-
-            <option value="General Question">General Question</option>
-            <option value="Pricing / Quote Request">Pricing / Quote Request</option>
-            <option value="Support / Help">Support / Help</option>
-
-            <option value="Website Enquiry — New Build">Website Enquiry — New Build</option>
-            <option value="Website Enquiry — Redesign">Website Enquiry — Redesign</option>
-            <option value="Website Enquiry — Fix / Maintenance">Website Enquiry — Fix / Maintenance</option>
-            <option value="Website Enquiry — Add Features">Website Enquiry — Add Features</option>
-
-            <option value="App Enquiry — New App">App Enquiry — New App</option>
-            <option value="App Enquiry — Prototype / MVP">App Enquiry — Prototype / MVP</option>
-            <option value="App Enquiry — Improvements / Updates">App Enquiry — Improvements / Updates</option>
-
-            <option value="Tool Request — Tracker / Dashboard">Tool Request — Tracker / Dashboard</option>
-            <option value="Tool Request — Automation / Workflow">Tool Request — Automation / Workflow</option>
-            <option value="Tool Request — Custom Feature">Tool Request — Custom Feature</option>
-
-            <option value="SmartStudy Enquiry — Feedback">SmartStudy Enquiry — Feedback</option>
-            <option value="SmartStudy Enquiry — School / Teacher">SmartStudy Enquiry — School / Teacher</option>
-            <option value="SmartStudy Enquiry — Sponsor / Partner">SmartStudy Enquiry — Sponsor / Partner</option>
-
-            <option value="Coding Course — Beginner (Ages 8–11)">Coding Course — Beginner (Ages 8–11)</option>
-            <option value="Coding Course — Beginner (Ages 11–14)">Coding Course — Beginner (Ages 11–14)</option>
-            <option value="Coding Course — GCSE Computer Science">Coding Course — GCSE Computer Science</option>
-            <option value="Coding Course — Website Basics (HTML/CSS)">Coding Course — Website Basics (HTML/CSS)</option>
-            <option value="Coding Course — JavaScript Basics">Coding Course — JavaScript Basics</option>
-
-            <option value="Sponsorship / Partnership">Sponsorship / Partnership</option>
-            <option value="Brand Collaboration">Brand Collaboration</option>
-
-            <option value="Other">Other</option>
-          </select>
+          <input id="subject" name="subject" type="text" readonly value="General — Question">
 
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="7" placeholder="Tell me what you want built..." required></textarea>
 
-          <button type="submit" class="btn" style="width:100%; text-align:center; margin-top: 10px;">
+          <button type="submit" class="btn" style="width:100%; margin-top:14px;">
             Send Message
           </button>
 
-          <p class="small-muted" style="margin-top: 12px;">
-            I’ll reply via email. Keep an eye on spam/junk just in case.
+          <p class="muted" style="margin-top:12px; font-size:.9rem;">
+            I’ll reply by email — check spam/junk just in case.
           </p>
         </form>
       </div>
@@ -166,33 +121,94 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <span>© 2025 Olls Creative Studio</span>
   </footer>
 
-  <!-- tabs script -->
   <script>
     (function () {
-      const tabs = document.querySelectorAll(".ctab");
-      const subject = document.getElementById("subject");
-      if (!tabs.length || !subject) return;
+      const mainButtons = document.querySelectorAll('.tabs .tab-btn');
+      const subtabs = document.getElementById('subtabs');
+      const subjectInput = document.getElementById('subject');
 
-      tabs.forEach(btn => {
-        btn.addEventListener("click", () => {
-          tabs.forEach(t => t.classList.remove("active"));
-          btn.classList.add("active");
+      const options = {
+        general: [
+          { label: 'Question', subject: 'General — Question' },
+          { label: 'Pricing', subject: 'General — Pricing / Quote' },
+          { label: 'Support', subject: 'General — Support' }
+        ],
+        website: [
+          { label: 'New Build', subject: 'Website — New Build' },
+          { label: 'Redesign', subject: 'Website — Redesign' },
+          { label: 'Fix / Maintenance', subject: 'Website — Fix / Maintenance' },
+          { label: 'Add Features', subject: 'Website — Add Features' }
+        ],
+        app: [
+          { label: 'New App', subject: 'App — New App' },
+          { label: 'Prototype / MVP', subject: 'App — Prototype / MVP' },
+          { label: 'Updates', subject: 'App — Improvements / Updates' }
+        ],
+        tool: [
+          { label: 'Tracker / Dashboard', subject: 'Tool — Tracker / Dashboard' },
+          { label: 'Automation', subject: 'Tool — Automation / Workflow' },
+          { label: 'Custom Feature', subject: 'Tool — Custom Feature' }
+        ],
+        course: [
+          { label: 'Ages 8–11', subject: 'Coding Course — Beginner (Ages 8–11)' },
+          { label: 'Ages 11–14', subject: 'Coding Course — Beginner (Ages 11–14)' },
+          { label: 'GCSE CS', subject: 'Coding Course — GCSE Computer Science' },
+          { label: 'HTML/CSS', subject: 'Coding Course — Website Basics (HTML/CSS)' },
+          { label: 'JavaScript', subject: 'Coding Course — JavaScript Basics' }
+        ],
+        smartstudy: [
+          { label: 'Feedback', subject: 'SmartStudy — Feedback' },
+          { label: 'School / Teacher', subject: 'SmartStudy — School / Teacher' },
+          { label: 'Sponsor / Partner', subject: 'SmartStudy — Sponsor / Partner' }
+        ],
+        partner: [
+          { label: 'Sponsorship', subject: 'Partnership — Sponsorship' },
+          { label: 'Collaboration', subject: 'Partnership — Brand Collaboration' },
+          { label: 'Other', subject: 'Partnership — Other' }
+        ]
+      };
 
-          const value = btn.getAttribute("data-cat") || "";
-          subject.value = value;
+      function renderSubtabs(key) {
+        subtabs.innerHTML = '';
+        (options[key] || []).forEach((opt, idx) => {
+          const btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'subtab-btn' + (idx === 0 ? ' active' : '');
+          btn.textContent = opt.label;
+          btn.dataset.subject = opt.subject;
+          subtabs.appendChild(btn);
+        });
 
-          // If option not found (rare), set to "Other"
-          if (subject.value !== value) subject.value = "Other";
+        // set default subject
+        const first = subtabs.querySelector('.subtab-btn');
+        if (first) subjectInput.value = first.dataset.subject;
+      }
+
+      // handle main tab clicks
+      mainButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          mainButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          renderSubtabs(btn.dataset.main);
         });
       });
 
-      // default selection on load
-      subject.value = "General Question";
+      // handle sub tab clicks (event delegation)
+      subtabs.addEventListener('click', (e) => {
+        const target = e.target.closest('.subtab-btn');
+        if (!target) return;
+
+        subtabs.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
+        target.classList.add('active');
+        subjectInput.value = target.dataset.subject;
+      });
+
+      // initial load
+      renderSubtabs('general');
     })();
   </script>
 
