@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Olls Creative Studio</title>
 
-  <link rel="stylesheet" href="./style.css?v=14">
+  <link rel="stylesheet" href="./style.css?v=15">
   <link rel="icon" type="image/png" href="./favicon.png">
   <link rel="apple-touch-icon" href="./favicon.png">
   <meta name="theme-color" content="#020617">
@@ -42,26 +42,26 @@
     <h1 class="hero-eyebrow">Contact</h1>
     <h2 class="hero-main">LET’S BUILD</h2>
     <p class="hero-sub">
-      Pick a category, choose a type, then send the details.
+      Choose a subject, then choose the type below. Clean and simple.
     </p>
   </section>
 
-  <!-- MAIN TABS -->
+  <!-- SUBJECT (TOP TABS) -->
   <section class="container" style="padding: 18px 0 0;">
-    <div class="tabs" aria-label="Contact main categories">
-      <button class="tab-btn active" type="button" data-main="general">General</button>
-      <button class="tab-btn" type="button" data-main="website">Website</button>
-      <button class="tab-btn" type="button" data-main="app">App</button>
-      <button class="tab-btn" type="button" data-main="tool">Tool</button>
-      <button class="tab-btn" type="button" data-main="course">Coding Course</button>
-      <button class="tab-btn" type="button" data-main="smartstudy">SmartStudy</button>
-      <button class="tab-btn" type="button" data-main="partner">Partnership</button>
+    <div class="tabs" aria-label="Contact subject">
+      <button class="tab-btn active" type="button" data-subject="Website">Website</button>
+      <button class="tab-btn" type="button" data-subject="App">App</button>
+      <button class="tab-btn" type="button" data-subject="Tool">Tool</button>
+      <button class="tab-btn" type="button" data-subject="Coding Course">Coding Course</button>
+      <button class="tab-btn" type="button" data-subject="SmartStudy">SmartStudy</button>
+      <button class="tab-btn" type="button" data-subject="Partnership">Partnership</button>
+      <button class="tab-btn" type="button" data-subject="General">General</button>
     </div>
   </section>
 
-  <!-- SUB TABS (changes depending on main tab) -->
-  <section class="container" style="padding: 16px 0 0;">
-    <div class="subtabs" id="subtabs" aria-label="Contact sub categories"></div>
+  <!-- TYPE (SECOND ROW TABS) -->
+  <section class="container" style="padding: 14px 0 0;">
+    <div class="subtabs" id="typeTabs" aria-label="Contact type"></div>
   </section>
 
   <!-- FORM -->
@@ -69,29 +69,82 @@
     <div class="contact-grid">
 
       <div class="card contact-info">
-        <h3>What to include</h3>
-        <p class="muted" style="margin-top:10px;">
-          Include your goal, timeframe, and any examples you like.
-        </p>
+  <h3>What to include</h3>
+  <p class="muted" style="margin-top:10px;">
+    Send the info below and I can reply faster with a proper plan + quote.
+  </p>
 
-        <div class="checklist">
-          <div class="check">✅ What you want built</div>
-          <div class="check">✅ Deadline / timeframe</div>
-          <div class="check">✅ Any references / examples</div>
-          <div class="check">✅ Features (optional)</div>
-        </div>
+  <div class="intake">
 
-        <div class="glow-note">
-          <strong>Quick tip</strong>
-          <p class="muted" style="margin-top:6px;">
-            The clearer your message, the faster I can quote and plan.
-          </p>
-        </div>
+    <div class="intake-block">
+      <div class="intake-top">
+        <span class="intake-icon">💡</span>
+        <strong>Your Idea</strong>
       </div>
+      <p class="muted">
+        What do you want built? What is the goal?
+        (e.g. “a bakery website”, “a revision app”, “a tool to track scores”)
+      </p>
+    </div>
+
+    <div class="intake-block">
+      <div class="intake-top">
+        <span class="intake-icon">🏷️</span>
+        <strong>Business or Personal</strong>
+      </div>
+      <p class="muted">
+        Tell me who it’s for:
+        <br>• <b>Business</b> (brand, services, customers)
+        <br>• <b>Personal</b> (portfolio, hobby, private project)
+      </p>
+    </div>
+
+    <div class="intake-block">
+      <div class="intake-top">
+        <span class="intake-icon">💷</span>
+        <strong>Budget</strong>
+      </div>
+      <p class="muted">
+        A rough budget range helps me recommend the best approach.
+        If you don’t know yet, just say “not sure”.
+      </p>
+    </div>
+
+    <div class="intake-block">
+      <div class="intake-top">
+        <span class="intake-icon">📅</span>
+        <strong>Deadline</strong>
+      </div>
+      <p class="muted">
+        When do you need it by? If it’s flexible, tell me your ideal timeframe.
+      </p>
+    </div>
+
+    <div class="intake-block">
+      <div class="intake-top">
+        <span class="intake-icon">🔗</span>
+        <strong>Links / References</strong>
+      </div>
+      <p class="muted">
+        Any websites, apps, or styles you like? Send links so I can match the vibe.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="glow-note" style="margin-top:18px;">
+    <strong>Fastest way to get a quote</strong>
+    <p class="muted" style="margin-top:6px;">
+      Tell me: <b>subject + type</b>, <b>business/personal</b>, <b>budget</b>, and <b>deadline</b>.
+      I’ll reply with a clear plan and next steps.
+    </p>
+  </div>
+</div>
+
 
       <div class="card contact-form">
         <h3>Send a message</h3>
-        <p class="muted" style="margin-top:6px;">The tabs auto-fill your subject.</p>
+        <p class="muted" style="margin-top:6px;">Tabs auto-fill your subject.</p>
 
         <form action="https://formspree.io/f/mnnoqanq" method="POST" class="ocs-form" style="margin-top:16px;">
 
@@ -101,9 +154,9 @@
           <label for="email">Your email</label>
           <input id="email" name="email" type="email" placeholder="you@email.com" required>
 
-          <!-- SUBJECT (auto-filled) -->
+          <!-- Auto-filled from tabs -->
           <label for="subject">Subject</label>
-          <input id="subject" name="subject" type="text" readonly value="General — Question">
+          <input id="subject" name="subject" type="text" readonly value="Website — New Build">
 
           <label for="message">Message</label>
           <textarea id="message" name="message" rows="7" placeholder="Tell me what you want built..." required></textarea>
@@ -127,88 +180,59 @@
 
   <script>
     (function () {
-      const mainButtons = document.querySelectorAll('.tabs .tab-btn');
-      const subtabs = document.getElementById('subtabs');
-      const subjectInput = document.getElementById('subject');
+      const subjectButtons = document.querySelectorAll('.tabs .tab-btn');
+      const typeTabs = document.getElementById('typeTabs');
+      const subjectField = document.getElementById('subject');
 
-      const options = {
-        general: [
-          { label: 'Question', subject: 'General — Question' },
-          { label: 'Pricing', subject: 'General — Pricing / Quote' },
-          { label: 'Support', subject: 'General — Support' }
-        ],
-        website: [
-          { label: 'New Build', subject: 'Website — New Build' },
-          { label: 'Redesign', subject: 'Website — Redesign' },
-          { label: 'Fix / Maintenance', subject: 'Website — Fix / Maintenance' },
-          { label: 'Add Features', subject: 'Website — Add Features' }
-        ],
-        app: [
-          { label: 'New App', subject: 'App — New App' },
-          { label: 'Prototype / MVP', subject: 'App — Prototype / MVP' },
-          { label: 'Updates', subject: 'App — Improvements / Updates' }
-        ],
-        tool: [
-          { label: 'Tracker / Dashboard', subject: 'Tool — Tracker / Dashboard' },
-          { label: 'Automation', subject: 'Tool — Automation / Workflow' },
-          { label: 'Custom Feature', subject: 'Tool — Custom Feature' }
-        ],
-        course: [
-          { label: 'Ages 8–11', subject: 'Coding Course — Beginner (Ages 8–11)' },
-          { label: 'Ages 11–14', subject: 'Coding Course — Beginner (Ages 11–14)' },
-          { label: 'GCSE CS', subject: 'Coding Course — GCSE Computer Science' },
-          { label: 'HTML/CSS', subject: 'Coding Course — Website Basics (HTML/CSS)' },
-          { label: 'JavaScript', subject: 'Coding Course — JavaScript Basics' }
-        ],
-        smartstudy: [
-          { label: 'Feedback', subject: 'SmartStudy — Feedback' },
-          { label: 'School / Teacher', subject: 'SmartStudy — School / Teacher' },
-          { label: 'Sponsor / Partner', subject: 'SmartStudy — Sponsor / Partner' }
-        ],
-        partner: [
-          { label: 'Sponsorship', subject: 'Partnership — Sponsorship' },
-          { label: 'Collaboration', subject: 'Partnership — Brand Collaboration' },
-          { label: 'Other', subject: 'Partnership — Other' }
-        ]
+      const typeOptions = {
+        "Website": ["New Build", "Redesign", "Fix / Maintenance", "Add Features"],
+        "App": ["New App", "Prototype / MVP", "Improvements / Updates"],
+        "Tool": ["Tracker / Dashboard", "Automation / Workflow", "Custom Feature"],
+        "Coding Course": ["Ages 8–11", "Ages 11–14", "GCSE Computer Science", "HTML/CSS Basics", "JavaScript Basics"],
+        "SmartStudy": ["Feedback", "School / Teacher", "Sponsor / Partner"],
+        "Partnership": ["Sponsorship", "Brand Collaboration", "Other"],
+        "General": ["Question", "Pricing / Quote", "Support"]
       };
 
-      function renderSubtabs(key) {
-        subtabs.innerHTML = '';
-        (options[key] || []).forEach((opt, idx) => {
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'subtab-btn' + (idx === 0 ? ' active' : '');
-          btn.textContent = opt.label;
-          btn.dataset.subject = opt.subject;
-          subtabs.appendChild(btn);
+      function renderTypeTabs(subject) {
+        typeTabs.innerHTML = "";
+
+        const list = typeOptions[subject] || ["Other"];
+        list.forEach((label, i) => {
+          const btn = document.createElement("button");
+          btn.type = "button";
+          btn.className = "subtab-btn" + (i === 0 ? " active" : "");
+          btn.textContent = label;
+          btn.dataset.full = subject + " — " + label;
+          typeTabs.appendChild(btn);
         });
 
-        // set default subject
-        const first = subtabs.querySelector('.subtab-btn');
-        if (first) subjectInput.value = first.dataset.subject;
+        // set default
+        const first = typeTabs.querySelector(".subtab-btn");
+        if (first) subjectField.value = first.dataset.full;
       }
 
-      // handle main tab clicks
-      mainButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          mainButtons.forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          renderSubtabs(btn.dataset.main);
+      // subject click
+      subjectButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          subjectButtons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          renderTypeTabs(btn.dataset.subject);
         });
       });
 
-      // handle sub tab clicks (event delegation)
-      subtabs.addEventListener('click', (e) => {
-        const target = e.target.closest('.subtab-btn');
+      // type click
+      typeTabs.addEventListener("click", (e) => {
+        const target = e.target.closest(".subtab-btn");
         if (!target) return;
 
-        subtabs.querySelectorAll('.subtab-btn').forEach(b => b.classList.remove('active'));
-        target.classList.add('active');
-        subjectInput.value = target.dataset.subject;
+        typeTabs.querySelectorAll(".subtab-btn").forEach(b => b.classList.remove("active"));
+        target.classList.add("active");
+        subjectField.value = target.dataset.full;
       });
 
-      // initial load
-      renderSubtabs('general');
+      // default load
+      renderTypeTabs("Website");
     })();
   </script>
 
