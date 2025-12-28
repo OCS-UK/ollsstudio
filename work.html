@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Work | Olls Creative Studio</title>
+
+<link rel="stylesheet" href="./style.css?v=99">
+
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <meta name="theme-color" content="#020617">
+</head>
+
+<body>
+
+  <!-- ✅ BULLETPROOF HEADER -->
+  <header class="ocs-header">
+    <div class="ocs-header-inner">
+
+      <a class="ocs-brand" href="./index.html">
+        <img src="./LOGO.png" alt="Olls Creative Studio Logo">
+        <div class="ocs-brand-text">
+          <strong>OLLS CREATIVE STUDIO</strong>
+          <span>Websites • Apps • Digital Products</span>
+        </div>
+      </a>
+
+      <nav class="ocs-nav">
+        <a href="./index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./website.html">Website</a>
+        <a href="./smartstudy.html">SmartStudy</a>
+        <a href="./about.html">About</a>
+        <a href="./partnerships.html">Partnerships</a>
+        <a href="./contact.html" class="ocs-cta">Contact</a>
+      </nav>
+
+    </div>
+  </header>
+
+    <!-- HERO -->
+  <section class="hero bg-grid bg-shapes">
+    <div class="hero-divider"></div>
+    <h1 class="hero-eyebrow">Work</h1>
+    <h2 class="hero-main">SELECTED PROJECTS</h2>
+    <p class="hero-sub">
+      Real builds + exactly what I can build for you. Projects and services are separated so clients instantly understand what’s what.
+    </p>
+
+    <div style="margin-top: 18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+      <a href="#featured" class="btn">View Featured Projects</a>
+      <a href="#services" class="btn" style="opacity:.9;">See What I Build</a>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="featured" class="container" style="padding: 40px 0 22px;">
+    <div style="max-width: 980px; margin: 0 auto;">
+      <h2 style="margin:0; letter-spacing:.04em;">Featured Projects</h2>
+      <p style="margin:10px 0 0; color: var(--grey); line-height:1.8;">
+        These are real builds. Each one includes a short description so nothing feels like a mystery button.
+      </p>
+    </div>
+  </section>
+
+  <!-- Project filter (projects only) -->
+  <section class="container" style="padding: 10px 0 0;">
+    <div class="tabs" role="tablist" aria-label="Project Filter">
+      <button class="tab-btn active" data-pfilter="all" role="tab">All</button>
+      <button class="tab-btn" data-pfilter="app" role="tab">Apps</button>
+      <button class="tab-btn" data-pfilter="website" role="tab">Websites</button>
+      <button class="tab-btn" data-pfilter="tool" role="tab">Tools</button>
+    </div>
+
+    <!-- Optional helper line to stop “acts like a button” confusion -->
+    <p style="margin: 14px 0 0; text-align:center; color: var(--grey);">
+      Filter projects — services are shown below.
+    </p>
+  </section>
+
+  <!-- Featured project grid -->
+  <section class="container" style="padding: 28px 0 70px;">
+    <div class="grid work-grid" id="featuredGrid">
+
+      <!-- SmartStudy -->
+      <div class="card work-card" data-ptype="app">
+        <div class="work-top">
+          <h3>SmartStudy</h3>
+          <span class="pill">App</span>
+        </div>
+        <p>
+          An all-in-one revision + progress system for UK students — track scores, target weak topics, and study smarter.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Highlights:<br>
+          • Progress tracking & subject breakdowns<br>
+          • Clear, student-friendly UI<br>
+          • Built to scale into a full platform
+        </p>
+        <div class="work-actions">
+          <a href="./smartstudy.html" class="btn">View Project</a>
+          <a href="./contact.html?subject=SmartStudy%20Style%20Build" class="btn" style="opacity:.9;">Request Something Similar</a>
+        </div>
+      </div>
+
+      <!-- Flossie's Bakehouse -->
+      <div class="card work-card" data-ptype="website">
+        <div class="work-top">
+          <h3>Flossie’s Bakehouse</h3>
+          <span class="pill">Website</span>
+        </div>
+        <p>
+          A real bakery website build — modern layout, clean navigation, and a customer-friendly design that feels on-brand.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Highlights:<br>
+          • Mobile-first layout<br>
+          • Clear sections & menus<br>
+          • Built for real customers
+        </p>
+        <div class="work-actions">
+          <a href="https://ocs-uk.github.io/Flossies-Bakehouse/" target="_blank" rel="noopener" class="btn">
+            View Live Website
+          </a>
+          <a href="./contact.html?subject=Flossies%20Style%20Website" class="btn" style="opacity:.9;">Request Something Similar</a>
+        </div>
+      </div>
+
+      <!-- Tools example / placeholder -->
+      <div class="card work-card" data-ptype="tool">
+        <div class="work-top">
+          <h3>Dashboards & Tools</h3>
+          <span class="pill">Tools</span>
+        </div>
+        <p>
+          Lightweight tools that save time — dashboards, trackers, and internal panels built to be simple, fast, and clean.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Examples:<br>
+          • Trackers & calculators<br>
+          • Admin dashboards<br>
+          • Workflow automations
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Tool%20Request" class="btn">Request a Tool</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVICES (what you build) -->
+  <section id="services" class="container" style="padding: 10px 0 22px;">
+    <div style="max-width: 980px; margin: 0 auto;">
+      <h2 style="margin:0; letter-spacing:.04em;">What I Build</h2>
+      <p style="margin:10px 0 0; color: var(--grey); line-height:1.8;">
+        These are services — not portfolio items. Each one explains what you get so clients understand instantly.
+      </p>
+    </div>
+  </section>
+
+  <section class="container" style="padding: 28px 0 90px;">
+    <div class="grid work-grid">
+
+      <!-- Websites service -->
+      <div class="card work-card">
+        <div class="work-top">
+          <h3>Websites</h3>
+          <span class="pill">Service</span>
+        </div>
+        <p>
+          Clean, modern websites built for speed and clarity — business sites, portfolios, landing pages, and bookings.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Includes:<br>
+          • Mobile-first layout<br>
+          • Clear CTA flow (leads / bookings / enquiries)<br>
+          • Fast loading + clean sections
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Website%20Enquiry" class="btn">Request a Website</a>
+        </div>
+      </div>
+
+      <!-- Apps service -->
+      <div class="card work-card">
+        <div class="work-top">
+          <h3>Apps</h3>
+          <span class="pill">Service</span>
+        </div>
+        <p>
+          Cross-platform app builds for tracking, learning, and productivity — ideal for MVPs and real-world tools.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Includes:<br>
+          • MVP planning + roadmap<br>
+          • Simple, user-friendly UI<br>
+          • Feature scoping (what to build first)
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=App%20Enquiry" class="btn">Request an App</a>
+        </div>
+      </div>
+
+      <!-- Tools service -->
+      <div class="card work-card">
+        <div class="work-top">
+          <h3>Tools & Automations</h3>
+          <span class="pill">Service</span>
+        </div>
+        <p>
+          Dashboards, trackers, workflows and small automations that save time and reduce admin.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Includes:<br>
+          • Trackers & dashboards<br>
+          • Forms / workflows<br>
+          • Quality-of-life tools
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Tool%20Request" class="btn">Request a Tool</a>
+        </div>
+      </div>
+
+      <!-- Courses service -->
+      <div class="card work-card">
+        <div class="work-top">
+          <h3>Coding Courses</h3>
+          <span class="pill">Service</span>
+        </div>
+        <p>
+          Beginner-friendly coding help for younger learners — calm, clear, step-by-step learning with real projects.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Topics can include:<br>
+          • HTML + CSS (real websites)<br>
+          • JavaScript basics<br>
+          • Small projects + challenges<br>
+          • Good habits & how to learn properly
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Coding%20Course%20Enquiry" class="btn">Ask about Courses</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-inner">
+      <h2>Want something built?</h2>
+      <p>
+        Tell me what you want, your deadline, and any references — I’ll handle the rest.
+      </p>
+      <a href="./contact.html" class="btn">Contact</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <span>© 2025 Olls Creative Studio</span>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>
