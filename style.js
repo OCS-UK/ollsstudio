@@ -21,32 +21,32 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 20);
 });
 
-// Work tabs filtering (safe: only runs on pages with .tab-btn)
-(() => {
-  const buttons = document.querySelectorAll(".tab-btn");
-  const cards = document.querySelectorAll(".work-card");
-  if (!buttons.length || !cards.length) return;
+// --- Work page project filter (safe-guarded) ---
+(function () {
+  const grid = document.querySelector('#featuredGrid');
+  const pills = document.querySelectorAll('.tab-btn[data-pfilter]');
+  if (!grid || !pills.length) return;
+
+  const cards = grid.querySelectorAll('.work-card');
 
   function setActive(btn) {
-    buttons.forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
+    pills.forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
   }
 
-  function filter(tag) {
+  function filter(type) {
     cards.forEach(card => {
-      const tags = (card.getAttribute("data-tags") || "").split(" ");
-      const show = tag === "all" || tags.includes(tag);
-      card.style.display = show ? "" : "none";
+      const t = card.getAttribute('data-ptype') || '';
+      card.style.display = (type === 'all' || t === type) ? '' : 'none';
     });
   }
 
-  buttons.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const tag = btn.getAttribute("data-filter");
+  pills.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const type = btn.getAttribute('data-pfilter');
       setActive(btn);
-      filter(tag);
+      filter(type);
     });
   });
-
-  filter("all");
 })();
+
