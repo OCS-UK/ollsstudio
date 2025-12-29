@@ -6,141 +6,36 @@
   <title>Work | Olls Creative Studio</title>
   <meta name="description" content="Selected work from Olls Creative Studio — websites, apps, and digital products built clean, fast, and premium." />
 
-  <!-- If your whole site uses a global stylesheet, keep ONE of these links.
-       If you know which one your index uses, keep that exact path and delete the other. -->
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- IMPORTANT:
+    To make it match your site, use the SAME stylesheet path as index.html.
+    If your index uses NONE, delete the line below.
+    If your index uses one, set this to the exact same href.
+  -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Work page polish (small + safe) -->
+  <!-- Tiny safe button polish (won't fight your main CSS) -->
   <style>
-    /* Keep this small so it still feels like the rest of your site */
-    :root{
-      --ocs-bg: #05070c;
-      --ocs-panel: rgba(255,255,255,0.05);
-      --ocs-stroke: rgba(255,255,255,0.12);
-      --ocs-text: rgba(255,255,255,0.92);
-      --ocs-muted: rgba(255,255,255,0.72);
-      --ocs-accent: #00ff95;
-      --ocs-accent2:#00d9ff;
-      --ocs-radius: 18px;
-    }
-
-    /* In case your global CSS is light, this keeps layout clean */
-    .ocs-wrap{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 28px 18px 60px;
-    }
-
-    .ocs-lead{
-      color: var(--ocs-muted);
-      line-height: 1.65;
-      max-width: 75ch;
-      margin-top: 8px;
-    }
-
-    .ocs-actions{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin: 14px 0 24px;
-    }
-
-    /* Buttons that clearly look clickable */
-    .ocs-btn{
+    /* Only affects if your CSS doesn't already style links/buttons */
+    .btns { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .btns a {
       display:inline-block;
-      padding: 10px 12px;
-      border-radius: 14px;
-      border: 1px solid var(--ocs-stroke);
-      background: var(--ocs-panel);
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.18);
       text-decoration:none;
-      color: inherit;
-      font-weight: 700;
     }
-    .ocs-btn:hover{ border-color: rgba(255,255,255,0.22); }
-    .ocs-btn.primary{
-      border-color: rgba(0,255,149,0.40);
-      background: rgba(0,255,149,0.12);
-    }
-    .ocs-btn.primary:hover{ border-color: rgba(0,255,149,0.60); }
-
-    /* Quick highlights row like your index */
-    .ocs-pills{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin: 12px 0 10px;
-    }
-    .ocs-pill{
-      padding: 7px 10px;
-      border-radius: 999px;
-      border: 1px solid var(--ocs-stroke);
-      background: rgba(255,255,255,0.04);
-      font-size: 12px;
-      color: rgba(255,255,255,0.82);
-    }
-
-    /* Filters */
-    .ocs-filters{
-      display:flex;
-      gap:8px;
-      flex-wrap:wrap;
-      margin: 12px 0 6px;
-    }
-    .ocs-filter{
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--ocs-stroke);
-      background: rgba(255,255,255,0.04);
-      color: inherit;
-      font-weight: 800;
-      cursor: pointer;
-    }
-    .ocs-filter.active{
-      border-color: rgba(0,255,149,0.45);
-      background: rgba(0,255,149,0.12);
-    }
-
-    /* Grid (cards are NOT clickable by default) */
-    .ocs-grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 14px;
-    }
-    @media (max-width: 980px){ .ocs-grid{ grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px){ .ocs-grid{ grid-template-columns: 1fr; } }
-
-    .ocs-card{
-      border: 1px solid var(--ocs-stroke);
-      background: rgba(255,255,255,0.04);
-      border-radius: var(--ocs-radius);
-      padding: 16px;
-      cursor: default; /* fixes “looks clickable but isn’t” */
-    }
-    .ocs-card h3{ margin-top: 0; }
-    .ocs-card p{ color: var(--ocs-muted); line-height: 1.6; }
-    .ocs-card ul{ color: rgba(255,255,255,0.82); line-height: 1.6; }
-    .ocs-card .ocs-actions{ margin: 12px 0 0; }
-
-    /* Only real links/buttons show pointer */
-    .ocs-card a, .ocs-actions a, .ocs-filter{ cursor:pointer; }
-    .ocs-hide{ display:none !important; }
-
-    /* Small section spacing to mirror index */
-    .ocs-section{ margin-top: 26px; }
-    .ocs-section h2{ margin-bottom: 8px; }
-    .ocs-section h3{ margin-bottom: 6px; }
+    .btns a:hover { border-color: rgba(255,255,255,0.35); }
   </style>
 </head>
 
 <body>
 
-  <!-- Header / Nav (matches your index links/order) -->
+  <!-- HEADER (match your index nav order) -->
   <header>
     <div class="logo">
       <a href="index.html">OLLS CREATIVE STUDIO <span>Websites • Apps • Digital Products</span></a>
     </div>
+
     <nav>
       <a href="index.html">Home</a>
       <a class="active" href="work.html">Work</a>
@@ -152,207 +47,111 @@
     </nav>
   </header>
 
-  <main class="ocs-wrap">
+  <main>
 
     <h1>Work</h1>
-    <h2>Real builds. Clean delivery.</h2>
-    <p class="ocs-lead">
-      Selected work and active builds — focused on quality, clarity, and speed.
-      Everything is designed to feel modern, calm, and premium. No clutter. No mess. Built properly.
+    <h2>MODERN DIGITAL BUILDS</h2>
+    <p>
+      Real builds and active projects — focused on quality, clarity, and speed.
+      Clean websites, apps, and tools designed to feel modern, calm, and premium.
+      No clutter. No mess. Built properly.
     </p>
 
-    <div class="ocs-actions">
-      <a class="ocs-btn primary" href="#projects">View Projects</a>
-      <a class="ocs-btn" href="#services">What I Build</a>
-      <a class="ocs-btn" href="contact.html">Start a Project</a>
+    <div class="btns">
+      <a href="contact.html">Start a Project</a>
+      <a href="#selected-work">View Selected Work</a>
     </div>
 
-    <div class="ocs-pills">
-      <span class="ocs-pill">Modern UI</span>
-      <span class="ocs-pill">Neon / Glass style</span>
-      <span class="ocs-pill">Mobile-first</span>
-      <span class="ocs-pill">Built properly</span>
+    <h2>What I Build</h2>
+    <p>
+      Everything is designed to be clean, fast, and easy to use — with a premium modern aesthetic.
+    </p>
+
+    <h3>Websites</h3>
+    <p>
+      Business sites, portfolios, landing pages, and modern branded sites that load fast and look premium.
+    </p>
+    <div class="btns">
+      <a href="website.html">Website Options</a>
     </div>
 
-    <!-- Projects -->
-    <section id="projects" class="ocs-section">
-      <h2>Selected Work</h2>
-      <p class="ocs-lead">Filter by type. Only the buttons are clickable — cards are just information.</p>
+    <h3>Apps</h3>
+    <p>
+      Cross-platform builds, MVP prototypes, revision tools, and clean mobile-first UI experiences.
+    </p>
+    <div class="btns">
+      <a href="smartstudy.html">SmartStudy</a>
+    </div>
 
-      <div class="ocs-filters" aria-label="Project filters">
-        <button class="ocs-filter active" type="button" data-filter="all">All</button>
-        <button class="ocs-filter" type="button" data-filter="app">Apps</button>
-        <button class="ocs-filter" type="button" data-filter="website">Websites</button>
-        <button class="ocs-filter" type="button" data-filter="tool">Tools</button>
-      </div>
+    <h3>Tools & Trackers</h3>
+    <p>
+      Dashboards, trackers, and small tools that solve real problems and stay simple to use.
+    </p>
+    <div class="btns">
+      <a href="contact.html">Request a Tool</a>
+    </div>
 
-      <div class="ocs-grid" id="ocsProjectGrid">
+    <h2 id="selected-work">Selected Work</h2>
+    <p>
+      Featured builds. Clear descriptions. No confusing “button” sections.
+    </p>
 
-        <!-- SmartStudy -->
-        <article class="ocs-card" data-type="app">
-          <h3>SmartStudy</h3>
-          <p><b>App</b></p>
-          <p>
-            A revision and progress-tracking platform built for UK students.
-            Track scores, subjects, and improvement over time.
-          </p>
-          <ul>
-            <li>Progress tracking + subject breakdowns</li>
-            <li>Clean, student-friendly UI</li>
-            <li>Built to scale into a full platform</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="smartstudy.html">View</a>
-            <a class="ocs-btn" href="contact.html">Build something similar</a>
-          </div>
-        </article>
+    <h3>SmartStudy</h3>
+    <p><b>App</b></p>
+    <p>
+      A revision and progress-tracking platform built for UK students. Track scores, subjects, and improvement over time.
+    </p>
+    <div class="btns">
+      <a href="smartstudy.html">View</a>
+    </div>
 
-        <!-- Flossie's -->
-        <article class="ocs-card" data-type="website">
-          <h3>Flossie’s Bakehouse</h3>
-          <p><b>Website</b></p>
-          <p>
-            A modern bakery website build with clean navigation and a friendly layout for customers.
-          </p>
-          <ul>
-            <li>Mobile-first layout</li>
-            <li>Clear sections + menus</li>
-            <li>Fast, premium styling</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View Live Site</a>
-            <a class="ocs-btn" href="contact.html">Request a site</a>
-          </div>
-        </article>
+    <h3>Flossie’s Bakehouse</h3>
+    <p><b>Website</b></p>
+    <p>
+      A modern bakery website build with clean navigation and a friendly layout for customers.
+    </p>
+    <div class="btns">
+      <a href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View Live Site</a>
+    </div>
 
-        <!-- Tools -->
-        <article class="ocs-card" data-type="tool">
-          <h3>Tools & Trackers</h3>
-          <p><b>Tools</b></p>
-          <p>
-            Dashboards, trackers, and small tools that solve real problems and stay simple to use.
-          </p>
-          <ul>
-            <li>Dashboards + trackers</li>
-            <li>Admin panels</li>
-            <li>Workflow automations</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="contact.html">Request a tool</a>
-          </div>
-        </article>
+    <h3>Next Builds</h3>
+    <p><b>In Progress</b></p>
+    <p>
+      More client work, tools, and web builds are currently in progress. Want yours next?
+    </p>
+    <div class="btns">
+      <a href="contact.html">Contact</a>
+    </div>
 
-      </div>
-    </section>
+    <h2>How it works</h2>
+    <p>Clear steps, fast communication, clean delivery.</p>
 
-    <!-- Services -->
-    <section id="services" class="ocs-section">
-      <h2>What I Build</h2>
-      <p class="ocs-lead">
-        These are services — not portfolio items. This keeps the page clear and easy for clients.
-      </p>
+    <h3>1) Message</h3>
+    <p>Tell me what you want built and the vibe you’re going for.</p>
 
-      <div class="ocs-grid">
+    <h3>2) Plan</h3>
+    <p>I reply with a clear plan, timeline, and next steps.</p>
 
-        <div class="ocs-card">
-          <h3>Websites</h3>
-          <p>
-            Business sites, portfolios, landing pages, and modern branded sites that load fast and look premium.
-          </p>
-          <ul>
-            <li>Mobile-first layout</li>
-            <li>Clear CTA flow (leads, enquiries, bookings)</li>
-            <li>Clean sections + modern styling</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="contact.html">Request a website</a>
-          </div>
-        </div>
+    <h3>3) Build</h3>
+    <p>I design + build, keeping you updated as it comes together.</p>
 
-        <div class="ocs-card">
-          <h3>Apps</h3>
-          <p>
-            Cross-platform builds, MVP prototypes, revision tools, and clean mobile-first UI experiences.
-          </p>
-          <ul>
-            <li>MVP planning + roadmap</li>
-            <li>Simple, user-friendly UI</li>
-            <li>Build the right features first</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="contact.html">Request an app</a>
-          </div>
-        </div>
+    <h3>4) Launch</h3>
+    <p>Final delivery + support, ready to publish and share.</p>
 
-        <div class="ocs-card">
-          <h3>Fixes & Redesigns</h3>
-          <p>
-            Broken layouts, messy CSS, confusing sections — turned into clean, premium pages that feel intentional.
-          </p>
-          <ul>
-            <li>Make pages match your site</li>
-            <li>Remove “fake button” UX</li>
-            <li>Improve layout + spacing</li>
-          </ul>
-          <div class="ocs-actions">
-            <a class="ocs-btn primary" href="contact.html">Fix my page</a>
-          </div>
-        </div>
+    <h2>Ready to build?</h2>
+    <p>
+      Send your idea and I’ll reply with a clear plan. Websites, apps, tools, and collaborations — built properly.
+    </p>
 
-      </div>
-    </section>
-
-    <!-- How it works (matches your index structure) -->
-    <section class="ocs-section">
-      <h2>How it works</h2>
-      <p class="ocs-lead">Clear steps, fast communication, clean delivery.</p>
-
-      <div class="ocs-grid">
-        <div class="ocs-card">
-          <h3>1) Message</h3>
-          <p>Tell me what you want built and the vibe you’re going for.</p>
-        </div>
-        <div class="ocs-card">
-          <h3>2) Plan</h3>
-          <p>I reply with a clear plan, timeline, and next steps.</p>
-        </div>
-        <div class="ocs-card">
-          <h3>3) Build</h3>
-          <p>I design + build, keeping you updated as it comes together.</p>
-        </div>
-      </div>
-
-      <div class="ocs-actions" style="margin-top:16px;">
-        <a class="ocs-btn primary" href="contact.html">Start a Project</a>
-      </div>
-    </section>
+    <div class="btns">
+      <a href="contact.html">Start a Project</a>
+    </div>
 
   </main>
 
   <footer>
     © 2025 Olls Creative Studio
   </footer>
-
-  <script>
-    // Simple filter (reliable)
-    const filterBtns = document.querySelectorAll(".ocs-filter");
-    const cards = document.querySelectorAll("#ocsProjectGrid .ocs-card");
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        filterBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        const f = btn.dataset.filter;
-
-        cards.forEach(card => {
-          const t = card.dataset.type;
-          const show = (f === "all") || (t === f);
-          card.classList.toggle("ocs-hide", !show);
-        });
-      });
-    });
-  </script>
 
 </body>
 </html>
