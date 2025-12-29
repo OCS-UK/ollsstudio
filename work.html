@@ -4,182 +4,193 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work | Olls Creative Studio</title>
-
-  <!-- If you already have a site-wide stylesheet, keep it -->
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <meta name="description" content="Selected work from Olls Creative Studio — websites, apps, and digital tools built with a modern neon/glass premium style." />
 
   <style>
-    /* ===============================
-       WORK PAGE (SCOPED) — OCS
-       Only affects this page
-    =============================== */
+    /* =========================
+       OCS WORK PAGE — PREMIUM
+       Neon / glass to match index
+       (Standalone, no external CSS needed)
+    ========================== */
 
     :root{
-      --bg: #0b0f14;
+      --bg: #05070c;
       --panel: rgba(255,255,255,0.06);
-      --panel2: rgba(255,255,255,0.08);
+      --panel2: rgba(255,255,255,0.09);
       --stroke: rgba(255,255,255,0.12);
+
       --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.68);
+      --muted: rgba(255,255,255,0.70);
       --muted2: rgba(255,255,255,0.55);
-      --accent: #66ff9a;
-      --accent2:#4de0ff;
-      --danger:#ff4d4d;
-      --shadow: 0 18px 60px rgba(0,0,0,0.45);
+
+      --accent: #00ff95;  /* green neon */
+      --accent2: #00d9ff; /* blue neon */
+
+      --shadow: 0 22px 70px rgba(0,0,0,0.48);
       --radius: 18px;
       --radius2: 26px;
     }
 
-    /* Page base */
-    body.work-page{
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
       margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(900px 500px at 10% 10%, rgba(102,255,154,0.14), transparent 55%),
-        radial-gradient(900px 500px at 90% 20%, rgba(77,224,255,0.12), transparent 55%),
-        radial-gradient(700px 400px at 40% 100%, rgba(102,255,154,0.08), transparent 60%),
-        var(--bg);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
       color: var(--text);
+      background:
+        radial-gradient(900px 520px at 12% 10%, rgba(0,255,149,0.16), transparent 55%),
+        radial-gradient(900px 520px at 88% 18%, rgba(0,217,255,0.14), transparent 55%),
+        radial-gradient(700px 420px at 45% 110%, rgba(0,255,149,0.10), transparent 60%),
+        var(--bg);
       overflow-x:hidden;
     }
 
     a{ color:inherit; text-decoration:none; }
-    a:focus, button:focus { outline: 2px solid rgba(102,255,154,0.7); outline-offset: 3px; border-radius: 12px; }
+    a:focus, button:focus { outline: 2px solid rgba(0,255,149,0.65); outline-offset: 3px; border-radius: 14px; }
 
-    /* Header / Nav (simple + clean) */
-    .ocs-header{
+    /* ---------- Header / Nav (index-like) ---------- */
+    header{
       position: sticky;
       top:0;
-      z-index:50;
-      backdrop-filter: blur(12px);
-      background: rgba(11,15,20,0.65);
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: rgba(5,7,12,0.68);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
-    .ocs-header-inner{
-      max-width: 1100px;
+    .header-inner{
+      max-width: 1120px;
       margin: 0 auto;
       padding: 14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
+      gap: 14px;
     }
+
     .brand{
       display:flex;
       flex-direction:column;
+      gap:4px;
       line-height:1.1;
     }
-    .brand strong{
-      letter-spacing: 0.12em;
+    .brand .top{
+      font-weight: 800;
+      letter-spacing: 0.16em;
       font-size: 12px;
-      color: rgba(255,255,255,0.84);
+      color: rgba(255,255,255,0.88);
     }
-    .brand span{
+    .brand .sub{
       font-size: 12px;
       color: var(--muted2);
-      margin-top: 4px;
     }
-    .nav{
+
+    nav{
       display:flex;
       gap: 10px;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
       justify-content:flex-end;
+      align-items:center;
     }
-    .nav a{
+    nav a{
       padding: 10px 12px;
       border-radius: 14px;
       border: 1px solid transparent;
       color: rgba(255,255,255,0.78);
-      transition: 140ms ease;
+      transition: 160ms ease;
     }
-    .nav a:hover{
-      border-color: rgba(255,255,255,0.10);
-      background: rgba(255,255,255,0.05);
+    nav a:hover{
+      border-color: rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
       color: rgba(255,255,255,0.95);
       cursor:pointer;
     }
-    .nav a.active{
-      background: rgba(102,255,154,0.10);
-      border-color: rgba(102,255,154,0.28);
-      color: rgba(255,255,255,0.95);
+    nav a.active{
+      background: linear-gradient(180deg, rgba(0,255,149,0.14), rgba(0,255,149,0.08));
+      border-color: rgba(0,255,149,0.32);
+      color: rgba(255,255,255,0.96);
     }
 
-    /* Layout */
+    /* ---------- Layout ---------- */
     .wrap{
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 34px 18px 60px;
+      padding: 34px 18px 68px;
     }
 
-    /* Hero */
+    /* ---------- Hero ---------- */
     .hero{
       display:grid;
-      grid-template-columns: 1.25fr 0.75fr;
-      gap: 18px;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
       align-items:stretch;
-      margin-top: 10px;
+      margin-top: 8px;
     }
-    @media (max-width: 920px){
+    @media (max-width: 940px){
       .hero{ grid-template-columns: 1fr; }
     }
 
-    .hero-card{
+    .glass{
       border: 1px solid rgba(255,255,255,0.10);
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
       border-radius: var(--radius2);
-      padding: 26px;
       box-shadow: var(--shadow);
       position:relative;
       overflow:hidden;
     }
-    .hero-card::before{
+
+    .hero-main{
+      padding: 26px;
+    }
+    .hero-main::before{
       content:"";
       position:absolute;
-      inset:-80px -140px auto auto;
-      width: 260px;
-      height: 260px;
-      background: radial-gradient(circle at 30% 30%, rgba(102,255,154,0.30), transparent 55%),
-                  radial-gradient(circle at 70% 50%, rgba(77,224,255,0.22), transparent 55%);
-      filter: blur(12px);
-      transform: rotate(16deg);
+      inset:-90px -160px auto auto;
+      width: 310px;
+      height: 310px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(0,255,149,0.32), transparent 55%),
+        radial-gradient(circle at 70% 45%, rgba(0,217,255,0.24), transparent 55%);
+      filter: blur(14px);
+      transform: rotate(18deg);
       pointer-events:none;
     }
+
     .kicker{
       display:inline-flex;
-      gap:10px;
       align-items:center;
-      padding: 8px 12px;
+      gap: 10px;
+      padding: 9px 12px;
       border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.05);
-      color: rgba(255,255,255,0.78);
       font-size: 12px;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.10em;
       text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
     }
     .kicker b{
       color: rgba(255,255,255,0.95);
       letter-spacing: 0.12em;
     }
+
     h1{
       margin: 14px 0 10px;
-      font-size: 46px;
-      line-height: 1.05;
+      font-size: 48px;
+      line-height: 1.04;
       letter-spacing: -0.02em;
     }
-    @media (max-width: 520px){
-      h1{ font-size: 38px; }
-    }
+    @media (max-width: 520px){ h1{ font-size: 40px; } }
+
     .lead{
+      margin: 0 0 16px;
       color: var(--muted);
+      line-height: 1.65;
       font-size: 16px;
-      line-height: 1.6;
-      margin: 0 0 18px;
-      max-width: 60ch;
+      max-width: 62ch;
     }
 
-    /* CTA buttons — ONLY these look clickable */
-    .cta-row{
+    /* Buttons — ONLY these look clickable */
+    .btn-row{
       display:flex;
       flex-wrap:wrap;
       gap: 10px;
@@ -189,71 +200,89 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      gap:10px;
+      gap: 10px;
       padding: 12px 14px;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.14);
       background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.92);
-      transition: 150ms ease;
-      font-weight: 600;
+      color: rgba(255,255,255,0.94);
+      font-weight: 700;
       font-size: 14px;
       cursor:pointer;
+      transition: 160ms ease;
       user-select:none;
     }
     .btn:hover{
       transform: translateY(-1px);
       background: rgba(255,255,255,0.09);
-      border-color: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.20);
     }
     .btn.primary{
-      background: rgba(102,255,154,0.14);
-      border-color: rgba(102,255,154,0.34);
+      background: linear-gradient(180deg, rgba(0,255,149,0.18), rgba(0,255,149,0.10));
+      border-color: rgba(0,255,149,0.38);
     }
     .btn.primary:hover{
-      background: rgba(102,255,154,0.18);
-      border-color: rgba(102,255,154,0.45);
+      background: linear-gradient(180deg, rgba(0,255,149,0.22), rgba(0,255,149,0.12));
+      border-color: rgba(0,255,149,0.52);
+    }
+    .btn.ghost{
+      background: rgba(0,217,255,0.08);
+      border-color: rgba(0,217,255,0.28);
+    }
+    .btn.ghost:hover{
+      background: rgba(0,217,255,0.11);
+      border-color: rgba(0,217,255,0.42);
     }
 
-    /* Side stat card */
-    .side{
+    /* Hero side panel */
+    .hero-side{
+      padding: 22px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap: 14px;
+    }
+    .hero-side h3{
+      margin:0;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.76);
+    }
+    .hero-side p{
+      margin:10px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .mini-grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .mini{
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.04);
-      border-radius: var(--radius2);
-      padding: 22px;
-      box-shadow: var(--shadow);
+      border-radius: 16px;
+      padding: 12px;
     }
-    .side h3{
-      margin:0 0 8px;
-      font-size: 14px;
+    .mini .t{
+      font-size: 12px;
+      color: var(--muted2);
       letter-spacing: 0.10em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.75);
     }
-    .side p{
-      margin: 0 0 14px;
-      color: var(--muted);
-      line-height:1.6;
-      font-size: 14px;
-    }
-    .pill-row{
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-    .pill{
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
-      border-radius: 999px;
-      padding: 8px 10px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.75);
+    .mini .v{
+      margin-top: 6px;
+      font-weight: 800;
+      font-size: 16px;
+      color: rgba(255,255,255,0.95);
     }
 
-    /* Section headings */
-    .section{
-      margin-top: 34px;
-    }
+    /* ---------- Sections ---------- */
+    .section{ margin-top: 34px; }
     .section-head{
       display:flex;
       align-items:flex-end;
@@ -262,17 +291,17 @@
       margin-bottom: 14px;
     }
     .section-head h2{
-      margin: 0;
-      font-size: 20px;
-      letter-spacing: 0.12em;
+      margin:0;
+      font-size: 18px;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
     .section-head .sub{
-      margin:0;
+      margin:6px 0 0;
       color: var(--muted2);
       font-size: 13px;
-      line-height:1.4;
-      max-width: 60ch;
+      line-height:1.45;
+      max-width: 68ch;
     }
 
     /* Filters */
@@ -280,6 +309,7 @@
       display:flex;
       gap: 8px;
       flex-wrap:wrap;
+      justify-content:flex-end;
       align-items:center;
     }
     .chip{
@@ -288,9 +318,10 @@
       border-radius: 999px;
       padding: 10px 12px;
       font-size: 13px;
+      font-weight: 700;
       color: rgba(255,255,255,0.80);
       cursor:pointer;
-      transition: 150ms ease;
+      transition: 160ms ease;
       user-select:none;
     }
     .chip:hover{
@@ -298,41 +329,45 @@
       border-color: rgba(255,255,255,0.18);
     }
     .chip.active{
-      background: rgba(102,255,154,0.14);
-      border-color: rgba(102,255,154,0.36);
-      color: rgba(255,255,255,0.95);
+      background: linear-gradient(180deg, rgba(0,255,149,0.16), rgba(0,255,149,0.10));
+      border-color: rgba(0,255,149,0.42);
+      color: rgba(255,255,255,0.96);
     }
 
-    /* Cards grid */
+    /* ---------- Project Cards ---------- */
     .grid{
       display:grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 14px;
     }
-    @media (max-width: 980px){
-      .grid{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px){
-      .grid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px){ .grid{ grid-template-columns: 1fr; } }
 
-    /* IMPORTANT: Cards are NOT clickable by default */
+    /* NOTE: cards are NOT clickable by default */
     .card{
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.04);
       border-radius: var(--radius);
       padding: 18px;
-      transition: 150ms ease;
-      cursor: default;          /* <- fixes your “looks clickable” problem */
+      transition: 160ms ease;
+      cursor: default; /* fixes the “fake button” feel */
+      position:relative;
+      overflow:hidden;
+      min-height: 240px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      gap: 10px;
     }
     .card:hover{
       background: rgba(255,255,255,0.055);
       border-color: rgba(255,255,255,0.14);
       transform: translateY(-1px);
     }
+
     .card-top{
       display:flex;
-      align-items:flex-start;
+      align-items:center;
       justify-content:space-between;
       gap: 10px;
       margin-bottom: 8px;
@@ -344,13 +379,15 @@
       border-radius: 999px;
       padding: 8px 10px;
       font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(255,255,255,0.05);
       color: rgba(255,255,255,0.78);
       white-space:nowrap;
     }
-    .tag.green{ border-color: rgba(102,255,154,0.28); background: rgba(102,255,154,0.10); }
-    .tag.blue{ border-color: rgba(77,224,255,0.28); background: rgba(77,224,255,0.10); }
+    .tag.green{ border-color: rgba(0,255,149,0.32); background: rgba(0,255,149,0.10); }
+    .tag.blue{ border-color: rgba(0,217,255,0.30); background: rgba(0,217,255,0.10); }
     .tag.gray{ border-color: rgba(255,255,255,0.14); background: rgba(255,255,255,0.05); }
 
     .card h3{
@@ -361,7 +398,7 @@
     .card p{
       margin: 0 0 12px;
       color: var(--muted);
-      line-height:1.55;
+      line-height: 1.55;
       font-size: 14px;
     }
     .bullets{
@@ -375,36 +412,39 @@
       display:flex;
       gap: 10px;
       flex-wrap:wrap;
+      margin-top: 6px;
     }
-    .actions a.btn,
-    .actions button.btn{
+    .actions a.btn{
       padding: 10px 12px;
       border-radius: 14px;
       font-size: 13px;
+      font-weight: 800;
     }
 
-    /* Services */
+    /* ---------- Services ---------- */
     .service-grid{
       display:grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
-    @media (max-width: 980px){
-      .service-grid{ grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 640px){
-      .service-grid{ grid-template-columns: 1fr; }
-    }
+    @media (max-width: 980px){ .service-grid{ grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 640px){ .service-grid{ grid-template-columns: 1fr; } }
 
     .service{
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(255,255,255,0.03);
       border-radius: var(--radius);
       padding: 18px;
-      cursor: default; /* services aren’t fake buttons */
+      cursor: default;
+      transition: 160ms ease;
+    }
+    .service:hover{
+      background: rgba(255,255,255,0.045);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
     }
     .service h4{
-      margin: 0 0 10px;
+      margin: 10px 0 10px;
       font-size: 16px;
     }
     .service ul{
@@ -415,9 +455,9 @@
       line-height:1.55;
     }
 
-    /* Bottom CTA */
+    /* ---------- Bottom CTA ---------- */
     .bottom-cta{
-      margin-top: 34px;
+      margin-top: 18px;
       border: 1px solid rgba(255,255,255,0.10);
       background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
       border-radius: var(--radius2);
@@ -430,44 +470,38 @@
     @media (max-width: 760px){
       .bottom-cta{ flex-direction:column; align-items:flex-start; }
     }
-    .bottom-cta h3{
-      margin:0 0 6px;
-      font-size: 18px;
-    }
-    .bottom-cta p{
-      margin:0;
-      color: var(--muted);
-      line-height:1.55;
-      font-size: 14px;
-      max-width: 70ch;
-    }
+    .bottom-cta h3{ margin:0 0 6px; font-size: 18px; }
+    .bottom-cta p{ margin:0; color: var(--muted); line-height:1.55; font-size: 14px; max-width: 70ch; }
 
     footer{
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
-      padding: 20px 18px 40px;
+      padding: 18px 18px 40px;
       color: rgba(255,255,255,0.55);
       font-size: 13px;
     }
+
+    /* Small tweaks */
+    .hide{ display:none !important; }
   </style>
 </head>
 
-<body class="work-page">
+<body>
 
-  <!-- HEADER -->
-  <header class="ocs-header">
-    <div class="ocs-header-inner">
+  <!-- Header (NO Partnerships link) -->
+  <header>
+    <div class="header-inner">
       <div class="brand">
-        <strong>OLLS CREATIVE STUDIO</strong>
-        <span>Websites • Apps • Digital Products</span>
+        <div class="top">OLLS CREATIVE STUDIO</div>
+        <div class="sub">Websites • Apps • Digital Products</div>
       </div>
-      <nav class="nav">
+
+      <nav>
         <a href="index.html">Home</a>
         <a class="active" href="work.html">Work</a>
         <a href="website.html">Website</a>
         <a href="smartstudy.html">SmartStudy</a>
         <a href="about.html">About</a>
-        <a href="partnerships.html">Partnerships</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
@@ -475,46 +509,66 @@
 
   <main class="wrap">
 
-    <!-- HERO -->
+    <!-- Hero -->
     <section class="hero">
-      <div class="hero-card">
-        <div class="kicker"><b>Work</b> selected projects + services</div>
-        <h1>Real builds.<br/>No mystery buttons.</h1>
+      <div class="glass hero-main">
+        <div class="kicker"><b>Work</b> premium builds only</div>
+        <h1>Selected work that<br/>looks expensive.</h1>
         <p class="lead">
-          Portfolio items are shown as real projects with clear descriptions.
-          Services are separated below so clients instantly understand what’s what.
+          Clean websites, apps, and tools built with a modern neon / glass aesthetic.
+          Everything here is clear and simple — no confusing “button” sections.
         </p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="#projects">View Featured Projects</a>
-          <a class="btn" href="#services">See What I Build</a>
-          <a class="btn" href="contact.html">Request a Quote</a>
+        <div class="btn-row">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#services">What I Build</a>
+          <a class="btn" href="contact.html">Start a Project</a>
         </div>
       </div>
 
-      <aside class="side">
-        <h3>What you get</h3>
-        <p>
-          Clean design, fast builds, clear communication — and a proper end result
-          that looks expensive and works on mobile.
-        </p>
-        <div class="pill-row">
-          <span class="pill">Mobile-first</span>
-          <span class="pill">Modern UI</span>
-          <span class="pill">Fast delivery</span>
-          <span class="pill">Clear structure</span>
-          <span class="pill">Real results</span>
+      <aside class="glass hero-side">
+        <div>
+          <h3>Quality focus</h3>
+          <p>
+            Fast, mobile-first, and structured properly.
+            Built to be clean, calm, and premium — like your index page.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="t">Style</div>
+              <div class="v">Neon / Glass</div>
+            </div>
+            <div class="mini">
+              <div class="t">Build</div>
+              <div class="v">Mobile-first</div>
+            </div>
+            <div class="mini">
+              <div class="t">Delivery</div>
+              <div class="v">Fast + clean</div>
+            </div>
+            <div class="mini">
+              <div class="t">Result</div>
+              <div class="v">Premium</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btn-row" style="margin-top:6px;">
+          <a class="btn primary" href="smartstudy.html">View SmartStudy</a>
+          <a class="btn" href="website.html">Website Options</a>
         </div>
       </aside>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- Projects -->
     <section id="projects" class="section">
       <div class="section-head">
         <div>
-          <h2>Featured Projects</h2>
-          <p class="sub">These are real builds. Filter by type — the buttons actually work.</p>
+          <h2>Selected Projects</h2>
+          <p class="sub">Filter by type — only real buttons act clickable. Everything else stays clean.</p>
         </div>
+
         <div class="filters" aria-label="Project filters">
           <button class="chip active" data-filter="all" type="button">All</button>
           <button class="chip" data-filter="app" type="button">Apps</button>
@@ -524,138 +578,145 @@
       </div>
 
       <div class="grid" id="projectGrid">
-
         <!-- SmartStudy -->
         <article class="card" data-type="app">
-          <div class="card-top">
-            <span class="tag green">App</span>
-            <span class="tag gray">Student platform</span>
+          <div>
+            <div class="card-top">
+              <span class="tag green">APP</span>
+              <span class="tag gray">Student platform</span>
+            </div>
+            <h3>SmartStudy</h3>
+            <p>
+              A revision + progress-tracking platform designed for UK students.
+              Track scores, subjects, and improvement over time with a clean UI.
+            </p>
+            <ul class="bullets">
+              <li>Progress tracking + subject breakdowns</li>
+              <li>Clean, student-friendly interface</li>
+              <li>Built to scale into a full platform</li>
+            </ul>
           </div>
-          <h3>SmartStudy</h3>
-          <p>
-            An all-in-one revision + progress system for UK students — track scores,
-            target weak topics, and study smarter.
-          </p>
-          <ul class="bullets">
-            <li>Progress tracking + subject breakdowns</li>
-            <li>Clear, student-friendly UI</li>
-            <li>Built to scale into a full platform</li>
-          </ul>
           <div class="actions">
-            <a class="btn primary" href="smartstudy.html">View Project</a>
-            <a class="btn" href="contact.html">Request Something Similar</a>
+            <a class="btn primary" href="smartstudy.html">View</a>
+            <a class="btn" href="contact.html">Build something similar</a>
           </div>
         </article>
 
         <!-- Flossie's Bakehouse -->
         <article class="card" data-type="website">
-          <div class="card-top">
-            <span class="tag blue">Website</span>
-            <span class="tag gray">Client build</span>
+          <div>
+            <div class="card-top">
+              <span class="tag blue">WEBSITE</span>
+              <span class="tag gray">Client build</span>
+            </div>
+            <h3>Flossie’s Bakehouse</h3>
+            <p>
+              A modern bakery website with clean navigation and a friendly layout.
+              Built to feel premium while staying simple for customers.
+            </p>
+            <ul class="bullets">
+              <li>Mobile-first layout</li>
+              <li>Clear sections + menu flow</li>
+              <li>Fast, clean design</li>
+            </ul>
           </div>
-          <h3>Flossie’s Bakehouse</h3>
-          <p>
-            A real bakery website build — modern layout, clean navigation, and a
-            customer-friendly design that feels on-brand.
-          </p>
-          <ul class="bullets">
-            <li>Mobile-first layout</li>
-            <li>Clear sections + menus</li>
-            <li>Built for real customers</li>
-          </ul>
           <div class="actions">
-            <a class="btn primary" href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View Live</a>
-            <a class="btn" href="contact.html">Request Something Similar</a>
+            <a class="btn primary" href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View live</a>
+            <a class="btn" href="contact.html">Request a site</a>
           </div>
         </article>
 
-        <!-- Dashboards & Tools -->
+        <!-- Tools -->
         <article class="card" data-type="tool">
-          <div class="card-top">
-            <span class="tag gray">Tools</span>
-            <span class="tag gray">Internal systems</span>
+          <div>
+            <div class="card-top">
+              <span class="tag gray">TOOLS</span>
+              <span class="tag gray">Dashboards</span>
+            </div>
+            <h3>Dashboards & Trackers</h3>
+            <p>
+              Lightweight tools that save time: trackers, admin panels, calculators,
+              and simple workflow systems — built to stay clean and easy.
+            </p>
+            <ul class="bullets">
+              <li>Trackers + calculators</li>
+              <li>Admin dashboards</li>
+              <li>Workflow automations</li>
+            </ul>
           </div>
-          <h3>Dashboards & Tools</h3>
-          <p>
-            Lightweight tools that save time — dashboards, trackers, and internal panels
-            built to be simple, fast, and clean.
-          </p>
-          <ul class="bullets">
-            <li>Trackers + calculators</li>
-            <li>Admin dashboards</li>
-            <li>Workflow automations</li>
-          </ul>
           <div class="actions">
-            <a class="btn primary" href="contact.html">Request a Tool</a>
+            <a class="btn primary" href="contact.html">Request a tool</a>
+            <a class="btn" href="#services">See services</a>
           </div>
         </article>
-
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- Services -->
     <section id="services" class="section">
       <div class="section-head">
         <div>
           <h2>What I Build</h2>
-          <p class="sub">These are services — not portfolio items. Each one explains what you actually get.</p>
+          <p class="sub">
+            Services are separate from projects so clients instantly understand what you’re buying.
+          </p>
         </div>
       </div>
 
       <div class="service-grid">
-
         <div class="service">
-          <div class="tag blue">Service</div>
+          <span class="tag blue">SERVICE</span>
           <h4>Websites</h4>
           <ul>
+            <li>Business sites, portfolios, landing pages</li>
             <li>Mobile-first layout + clear sections</li>
-            <li>Strong CTA flow (leads / bookings / enquiries)</li>
-            <li>Fast loading, modern design</li>
+            <li>Fast loading + premium modern styling</li>
           </ul>
-          <a class="btn primary" href="contact.html">Request a Website</a>
+          <a class="btn primary" href="contact.html">Request a website</a>
         </div>
 
         <div class="service">
-          <div class="tag green">Service</div>
+          <span class="tag green">SERVICE</span>
           <h4>Apps</h4>
           <ul>
-            <li>MVP planning + roadmap</li>
-            <li>Simple, user-friendly UI</li>
-            <li>Feature scoping (what to build first)</li>
+            <li>MVPs, prototypes, and real-world tools</li>
+            <li>Clean UI focused on simplicity</li>
+            <li>Feature planning (build the right thing first)</li>
           </ul>
-          <a class="btn primary" href="contact.html">Request an App</a>
+          <a class="btn primary" href="contact.html">Request an app</a>
         </div>
 
         <div class="service">
-          <div class="tag gray">Service</div>
+          <span class="tag gray">SERVICE</span>
           <h4>Tools & Automations</h4>
           <ul>
-            <li>Dashboards + trackers</li>
-            <li>Forms / workflows</li>
-            <li>Quality-of-life systems</li>
+            <li>Dashboards, trackers, simple workflows</li>
+            <li>Reduce admin + speed things up</li>
+            <li>Clean systems that don’t feel messy</li>
           </ul>
-          <a class="btn primary" href="contact.html">Request a Tool</a>
+          <a class="btn primary" href="contact.html">Request a tool</a>
         </div>
 
         <div class="service">
-          <div class="tag gray">Service</div>
-          <h4>Coding Courses</h4>
+          <span class="tag gray">SERVICE</span>
+          <h4>Support / Builds</h4>
           <ul>
-            <li>Beginner-friendly web skills</li>
-            <li>Real projects (not boring theory)</li>
-            <li>Good habits + how to learn properly</li>
+            <li>Fix broken pages + redesign sections</li>
+            <li>Improve layout, spacing, and structure</li>
+            <li>Make your site feel premium</li>
           </ul>
-          <a class="btn primary" href="contact.html">Ask about Courses</a>
+          <a class="btn primary" href="contact.html">Fix my site</a>
         </div>
-
       </div>
 
       <div class="bottom-cta">
         <div>
-          <h3>Want something built?</h3>
-          <p>Send what you want, your deadline, and any references — I’ll handle the rest.</p>
+          <h3>Want yours next?</h3>
+          <p>
+            Send what you want built, your deadline, and any reference sites. I’ll reply with a clear plan and next steps.
+          </p>
         </div>
-        <a class="btn primary" href="contact.html">Contact</a>
+        <a class="btn primary" href="contact.html">Start a Project</a>
       </div>
     </section>
 
@@ -666,21 +727,21 @@
   </footer>
 
   <script>
-    // Project filter (simple + reliable)
-    const chips = document.querySelectorAll('.chip');
-    const cards = document.querySelectorAll('#projectGrid .card');
+    // Simple filter (fast + reliable)
+    const chips = document.querySelectorAll(".chip");
+    const cards = document.querySelectorAll("#projectGrid .card");
 
     chips.forEach(chip => {
-      chip.addEventListener('click', () => {
-        chips.forEach(c => c.classList.remove('active'));
-        chip.classList.add('active');
+      chip.addEventListener("click", () => {
+        chips.forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
 
         const filter = chip.dataset.filter;
 
         cards.forEach(card => {
           const type = card.dataset.type;
-          const show = (filter === 'all') || (type === filter);
-          card.style.display = show ? '' : 'none';
+          const show = (filter === "all") || (type === filter);
+          card.classList.toggle("hide", !show);
         });
       });
     });
