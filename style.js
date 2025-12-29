@@ -21,3 +21,25 @@ window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 20);
 });
 
+// Work page tabs filter
+document.addEventListener("DOMContentLoaded", () => {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const cards = document.querySelectorAll(".work-card");
+
+  if (!tabButtons.length || !cards.length) return;
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      tabButtons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      const filter = btn.dataset.filter;
+
+      cards.forEach(card => {
+        const tags = (card.dataset.tags || "").toLowerCase();
+        const show = filter === "all" || tags.includes(filter.toLowerCase());
+        card.style.display = show ? "" : "none";
+      });
+    });
+  });
+});
