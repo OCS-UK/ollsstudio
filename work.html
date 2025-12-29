@@ -1,157 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Work | Olls Creative Studio</title>
-  <meta name="description" content="Selected work from Olls Creative Studio — websites, apps, and digital products built clean, fast, and premium." />
 
-  <!-- IMPORTANT:
-    To make it match your site, use the SAME stylesheet path as index.html.
-    If your index uses NONE, delete the line below.
-    If your index uses one, set this to the exact same href.
-  -->
-   <link rel="stylesheet" href="./style.css?v=99">
-
-  <!-- Tiny safe button polish (won't fight your main CSS) -->
-  <style>
-    /* Only affects if your CSS doesn't already style links/buttons */
-    .btns { display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
-    .btns a {
-      display:inline-block;
-      padding:10px 12px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,0.18);
-      text-decoration:none;
-    }
-    .btns a:hover { border-color: rgba(255,255,255,0.35); }
-  </style>
+  <link rel="stylesheet" href="./style.css?v=99">
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="apple-touch-icon" href="./favicon.png">
+  <meta name="theme-color" content="#020617">
 </head>
 
 <body>
 
-  <!-- HEADER (match your index nav order) -->
-  <header>
-    <div class="logo">
-      <a href="index.html">OLLS CREATIVE STUDIO <span>Websites • Apps • Digital Products</span></a>
-    </div>
+  <!-- ✅ BULLETPROOF HEADER -->
+  <header class="ocs-header">
+    <div class="ocs-header-inner">
 
-    <nav>
-      <a href="index.html">Home</a>
-      <a class="active" href="work.html">Work</a>
-      <a href="website.html">Website</a>
-      <a href="smartstudy.html">SmartStudy</a>
-      <a href="about.html">About</a>
-      <a href="partnerships.html">Partnerships</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+      <a class="ocs-brand" href="./index.html">
+        <img src="./LOGO.png" alt="Olls Creative Studio Logo">
+        <div class="ocs-brand-text">
+          <strong>OLLS CREATIVE STUDIO</strong>
+          <span>Websites • Apps • Digital Products</span>
+        </div>
+      </a>
+
+      <nav class="ocs-nav">
+        <a href="./index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./website.html">Website</a>
+        <a href="./smartstudy.html">SmartStudy</a>
+        <a href="./about.html">About</a>
+        <a href="./sponsorship.html">Partnerships</a>
+        <a href="./contact.html" class="ocs-cta">Contact</a>
+      </nav>
+
+    </div>
   </header>
 
-  <main>
-
-    <h1>Work</h1>
-    <h2>MODERN DIGITAL BUILDS</h2>
-    <p>
-      Real builds and active projects — focused on quality, clarity, and speed.
-      Clean websites, apps, and tools designed to feel modern, calm, and premium.
-      No clutter. No mess. Built properly.
+  <!-- HERO -->
+  <section class="hero bg-grid bg-shapes">
+    <div class="hero-divider"></div>
+    <h1 class="hero-eyebrow">Work</h1>
+    <h2 class="hero-main">SELECTED PROJECTS</h2>
+    <p class="hero-sub">
+      Here’s what I build with code — websites, apps, and digital tools.
+      Use the tabs to browse.
     </p>
+  </section>
 
-    <div class="btns">
-      <a href="contact.html">Start a Project</a>
-      <a href="#selected-work">View Selected Work</a>
+  <!-- TABS -->
+  <section class="container" style="padding: 40px 0 0;">
+    <div class="tabs" role="tablist" aria-label="Work Tabs">
+      <button class="tab-btn active" data-filter="all" role="tab">All</button>
+      <button class="tab-btn" data-filter="smartstudy" role="tab">SmartStudy</button>
+      <button class="tab-btn" data-filter="flossies" role="tab">Flossie’s</button>
+      <button class="tab-btn" data-filter="websites" role="tab">Websites</button>
+      <button class="tab-btn" data-filter="apps" role="tab">Apps</button>
+      <button class="tab-btn" data-filter="tools" role="tab">Tools</button>
+      <button class="tab-btn" data-filter="courses" role="tab">Coding Courses</button>
     </div>
+  </section>
 
-    <h2>What I Build</h2>
-    <p>
-      Everything is designed to be clean, fast, and easy to use — with a premium modern aesthetic.
-    </p>
+  <!-- PROJECT GRID -->
+  <section class="container" style="padding: 40px 0 90px;">
+    <div class="grid work-grid">
 
-    <h3>Websites</h3>
-    <p>
-      Business sites, portfolios, landing pages, and modern branded sites that load fast and look premium.
-    </p>
-    <div class="btns">
-      <a href="website.html">Website Options</a>
+      <!-- SmartStudy -->
+      <div class="card work-card" data-tags="apps smartstudy">
+        <div class="work-top">
+          <h3>SmartStudy</h3>
+          <span class="pill">App</span>
+        </div>
+        <p>
+          An all-in-one revision + progress-tracking app built for UK students to study smarter, not harder.
+        </p>
+        <div class="work-actions">
+          <a href="./smartstudy.html" class="btn">View Project</a>
+        </div>
+      </div>
+
+      <!-- Flossie's Bakehouse -->
+      <div class="card work-card" data-tags="websites flossies">
+        <div class="work-top">
+          <h3>Flossie’s Bakehouse</h3>
+          <span class="pill">Website</span>
+        </div>
+        <p>
+          A real website build for a bakery brand — modern layout, clean navigation, and customer-friendly design.
+        </p>
+        <div class="work-actions">
+          <a href="https://ocs-uk.github.io/Flossies-Bakehouse/" target="_blank" rel="noopener" class="btn">
+            View Live Website
+          </a>
+        </div>
+      </div>
+
+      <!-- Websites (what you can make) -->
+      <div class="card work-card" data-tags="websites">
+        <div class="work-top">
+          <h3>Websites I Build</h3>
+          <span class="pill">Web</span>
+        </div>
+        <p style="color: var(--grey); line-height: 1.9;">
+          • Business / brand websites<br>
+          • Portfolio websites<br>
+          • Landing pages<br>
+          • Event / community sites<br>
+          • Menu / booking style sites
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Website%20Enquiry" class="btn">Request a Website</a>
+        </div>
+      </div>
+
+      <!-- Apps (what you can make) -->
+      <div class="card work-card" data-tags="apps">
+        <div class="work-top">
+          <h3>Apps I Build</h3>
+          <span class="pill">App</span>
+        </div>
+        <p style="color: var(--grey); line-height: 1.9;">
+          • Revision / tracking apps<br>
+          • Dashboards & tools<br>
+          • Cross-platform builds (iOS/Android)<br>
+          • Simple MVP prototypes
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=App%20Enquiry" class="btn">Request an App</a>
+        </div>
+      </div>
+
+      <!-- Tools / automations -->
+      <div class="card work-card" data-tags="tools">
+        <div class="work-top">
+          <h3>Tools & Automations</h3>
+          <span class="pill">Tools</span>
+        </div>
+        <p style="color: var(--grey); line-height: 1.9;">
+          • Simple calculators & trackers<br>
+          • Forms / workflows<br>
+          • Study tools & dashboards<br>
+          • Small “quality of life” tools
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Tool%20Request" class="btn">Request a Tool</a>
+        </div>
+      </div>
+
+      <!-- Coding courses -->
+      <div class="card work-card" data-tags="courses">
+        <div class="work-top">
+          <h3>Coding Courses (Younger Learners)</h3>
+          <span class="pill">Learning</span>
+        </div>
+        <p>
+          Beginner-friendly coding help for younger students who want to learn the basics properly — calm, clear, and step-by-step.
+        </p>
+        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
+          Topics can include:<br>
+          • HTML + CSS (make real websites)<br>
+          • JavaScript basics (make things interactive)<br>
+          • Simple projects + challenges<br>
+          • Good habits & how to learn coding
+        </p>
+        <div class="work-actions">
+          <a href="./contact.html?subject=Coding%20Course%20Enquiry" class="btn">Ask about Courses</a>
+        </div>
+      </div>
+
     </div>
+  </section>
 
-    <h3>Apps</h3>
-    <p>
-      Cross-platform builds, MVP prototypes, revision tools, and clean mobile-first UI experiences.
-    </p>
-    <div class="btns">
-      <a href="smartstudy.html">SmartStudy</a>
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-inner">
+      <h2>Want something built?</h2>
+      <p>
+        Tell me what you want, your deadline, and any references — I’ll handle the rest.
+      </p>
+      <a href="./contact.html" class="btn">Contact</a>
     </div>
+  </section>
 
-    <h3>Tools & Trackers</h3>
-    <p>
-      Dashboards, trackers, and small tools that solve real problems and stay simple to use.
-    </p>
-    <div class="btns">
-      <a href="contact.html">Request a Tool</a>
-    </div>
-
-    <h2 id="selected-work">Selected Work</h2>
-    <p>
-      Featured builds. Clear descriptions. No confusing “button” sections.
-    </p>
-
-    <h3>SmartStudy</h3>
-    <p><b>App</b></p>
-    <p>
-      A revision and progress-tracking platform built for UK students. Track scores, subjects, and improvement over time.
-    </p>
-    <div class="btns">
-      <a href="smartstudy.html">View</a>
-    </div>
-
-    <h3>Flossie’s Bakehouse</h3>
-    <p><b>Website</b></p>
-    <p>
-      A modern bakery website build with clean navigation and a friendly layout for customers.
-    </p>
-    <div class="btns">
-      <a href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View Live Site</a>
-    </div>
-
-    <h3>Next Builds</h3>
-    <p><b>In Progress</b></p>
-    <p>
-      More client work, tools, and web builds are currently in progress. Want yours next?
-    </p>
-    <div class="btns">
-      <a href="contact.html">Contact</a>
-    </div>
-
-    <h2>How it works</h2>
-    <p>Clear steps, fast communication, clean delivery.</p>
-
-    <h3>1) Message</h3>
-    <p>Tell me what you want built and the vibe you’re going for.</p>
-
-    <h3>2) Plan</h3>
-    <p>I reply with a clear plan, timeline, and next steps.</p>
-
-    <h3>3) Build</h3>
-    <p>I design + build, keeping you updated as it comes together.</p>
-
-    <h3>4) Launch</h3>
-    <p>Final delivery + support, ready to publish and share.</p>
-
-    <h2>Ready to build?</h2>
-    <p>
-      Send your idea and I’ll reply with a clear plan. Websites, apps, tools, and collaborations — built properly.
-    </p>
-
-    <div class="btns">
-      <a href="contact.html">Start a Project</a>
-    </div>
-
-  </main>
-
-  <footer>
-    © 2025 Olls Creative Studio
+  <footer class="site-footer">
+    <span>© 2025 Olls Creative Studio</span>
   </footer>
 
+  <script src="./script.js"></script>
 </body>
 </html>
