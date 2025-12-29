@@ -1,268 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work | Olls Creative Studio</title>
 
-<link rel="stylesheet" href="./work.css">
+  <!-- If you already have a site-wide stylesheet, keep it -->
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
 
-  <link rel="icon" type="image/png" href="./favicon.png">
-  <link rel="apple-touch-icon" href="./favicon.png">
-  <meta name="theme-color" content="#020617">
+  <style>
+    /* ===============================
+       WORK PAGE (SCOPED) — OCS
+       Only affects this page
+    =============================== */
+
+    :root{
+      --bg: #0b0f14;
+      --panel: rgba(255,255,255,0.06);
+      --panel2: rgba(255,255,255,0.08);
+      --stroke: rgba(255,255,255,0.12);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.68);
+      --muted2: rgba(255,255,255,0.55);
+      --accent: #66ff9a;
+      --accent2:#4de0ff;
+      --danger:#ff4d4d;
+      --shadow: 0 18px 60px rgba(0,0,0,0.45);
+      --radius: 18px;
+      --radius2: 26px;
+    }
+
+    /* Page base */
+    body.work-page{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:
+        radial-gradient(900px 500px at 10% 10%, rgba(102,255,154,0.14), transparent 55%),
+        radial-gradient(900px 500px at 90% 20%, rgba(77,224,255,0.12), transparent 55%),
+        radial-gradient(700px 400px at 40% 100%, rgba(102,255,154,0.08), transparent 60%),
+        var(--bg);
+      color: var(--text);
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:focus, button:focus { outline: 2px solid rgba(102,255,154,0.7); outline-offset: 3px; border-radius: 12px; }
+
+    /* Header / Nav (simple + clean) */
+    .ocs-header{
+      position: sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter: blur(12px);
+      background: rgba(11,15,20,0.65);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .ocs-header-inner{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex;
+      flex-direction:column;
+      line-height:1.1;
+    }
+    .brand strong{
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: rgba(255,255,255,0.84);
+    }
+    .brand span{
+      font-size: 12px;
+      color: var(--muted2);
+      margin-top: 4px;
+    }
+    .nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content:flex-end;
+    }
+    .nav a{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px solid transparent;
+      color: rgba(255,255,255,0.78);
+      transition: 140ms ease;
+    }
+    .nav a:hover{
+      border-color: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.95);
+      cursor:pointer;
+    }
+    .nav a.active{
+      background: rgba(102,255,154,0.10);
+      border-color: rgba(102,255,154,0.28);
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* Layout */
+    .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 34px 18px 60px;
+    }
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 18px;
+      align-items:stretch;
+      margin-top: 10px;
+    }
+    @media (max-width: 920px){
+      .hero{ grid-template-columns: 1fr; }
+    }
+
+    .hero-card{
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+      border-radius: var(--radius2);
+      padding: 26px;
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:-80px -140px auto auto;
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle at 30% 30%, rgba(102,255,154,0.30), transparent 55%),
+                  radial-gradient(circle at 70% 50%, rgba(77,224,255,0.22), transparent 55%);
+      filter: blur(12px);
+      transform: rotate(16deg);
+      pointer-events:none;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.78);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .kicker b{
+      color: rgba(255,255,255,0.95);
+      letter-spacing: 0.12em;
+    }
+    h1{
+      margin: 14px 0 10px;
+      font-size: 46px;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+    }
+    @media (max-width: 520px){
+      h1{ font-size: 38px; }
+    }
+    .lead{
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0 0 18px;
+      max-width: 60ch;
+    }
+
+    /* CTA buttons — ONLY these look clickable */
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.92);
+      transition: 150ms ease;
+      font-weight: 600;
+      font-size: 14px;
+      cursor:pointer;
+      user-select:none;
+    }
+    .btn:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .btn.primary{
+      background: rgba(102,255,154,0.14);
+      border-color: rgba(102,255,154,0.34);
+    }
+    .btn.primary:hover{
+      background: rgba(102,255,154,0.18);
+      border-color: rgba(102,255,154,0.45);
+    }
+
+    /* Side stat card */
+    .side{
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius2);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .side h3{
+      margin:0 0 8px;
+      font-size: 14px;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+    }
+    .side p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height:1.6;
+      font-size: 14px;
+    }
+    .pill-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+    }
+    .pill{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* Section headings */
+    .section{
+      margin-top: 34px;
+    }
+    .section-head{
+      display:flex;
+      align-items:flex-end;
+      justify-content:space-between;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+    .section-head h2{
+      margin: 0;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .section-head .sub{
+      margin:0;
+      color: var(--muted2);
+      font-size: 13px;
+      line-height:1.4;
+      max-width: 60ch;
+    }
+
+    /* Filters */
+    .filters{
+      display:flex;
+      gap: 8px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .chip{
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      border-radius: 999px;
+      padding: 10px 12px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.80);
+      cursor:pointer;
+      transition: 150ms ease;
+      user-select:none;
+    }
+    .chip:hover{
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.18);
+    }
+    .chip.active{
+      background: rgba(102,255,154,0.14);
+      border-color: rgba(102,255,154,0.36);
+      color: rgba(255,255,255,0.95);
+    }
+
+    /* Cards grid */
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 980px){
+      .grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    /* IMPORTANT: Cards are NOT clickable by default */
+    .card{
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.04);
+      border-radius: var(--radius);
+      padding: 18px;
+      transition: 150ms ease;
+      cursor: default;          /* <- fixes your “looks clickable” problem */
+    }
+    .card:hover{
+      background: rgba(255,255,255,0.055);
+      border-color: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
+    }
+    .card-top{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap: 8px;
+      border-radius: 999px;
+      padding: 8px 10px;
+      font-size: 12px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: rgba(255,255,255,0.78);
+      white-space:nowrap;
+    }
+    .tag.green{ border-color: rgba(102,255,154,0.28); background: rgba(102,255,154,0.10); }
+    .tag.blue{ border-color: rgba(77,224,255,0.28); background: rgba(77,224,255,0.10); }
+    .tag.gray{ border-color: rgba(255,255,255,0.14); background: rgba(255,255,255,0.05); }
+
+    .card h3{
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    .card p{
+      margin: 0 0 12px;
+      color: var(--muted);
+      line-height:1.55;
+      font-size: 14px;
+    }
+    .bullets{
+      margin: 0 0 14px;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.78);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    .actions{
+      display:flex;
+      gap: 10px;
+      flex-wrap:wrap;
+    }
+    .actions a.btn,
+    .actions button.btn{
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 13px;
+    }
+
+    /* Services */
+    .service-grid{
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 980px){
+      .service-grid{ grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px){
+      .service-grid{ grid-template-columns: 1fr; }
+    }
+
+    .service{
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.03);
+      border-radius: var(--radius);
+      padding: 18px;
+      cursor: default; /* services aren’t fake buttons */
+    }
+    .service h4{
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .service ul{
+      margin: 0 0 14px;
+      padding-left: 18px;
+      color: rgba(255,255,255,0.76);
+      font-size: 13px;
+      line-height:1.55;
+    }
+
+    /* Bottom CTA */
+    .bottom-cta{
+      margin-top: 34px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.03));
+      border-radius: var(--radius2);
+      padding: 22px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+    }
+    @media (max-width: 760px){
+      .bottom-cta{ flex-direction:column; align-items:flex-start; }
+    }
+    .bottom-cta h3{
+      margin:0 0 6px;
+      font-size: 18px;
+    }
+    .bottom-cta p{
+      margin:0;
+      color: var(--muted);
+      line-height:1.55;
+      font-size: 14px;
+      max-width: 70ch;
+    }
+
+    footer{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px 18px 40px;
+      color: rgba(255,255,255,0.55);
+      font-size: 13px;
+    }
+  </style>
 </head>
 
-<body>
+<body class="work-page">
 
-  <!-- ✅ BULLETPROOF HEADER -->
+  <!-- HEADER -->
   <header class="ocs-header">
     <div class="ocs-header-inner">
-
-      <a class="ocs-brand" href="./index.html">
-        <img src="./LOGO.png" alt="Olls Creative Studio Logo">
-        <div class="ocs-brand-text">
-          <strong>OLLS CREATIVE STUDIO</strong>
-          <span>Websites • Apps • Digital Products</span>
-        </div>
-      </a>
-
-      <nav class="ocs-nav">
-        <a href="./index.html">Home</a>
-        <a href="./work.html">Work</a>
-        <a href="./website.html">Website</a>
-        <a href="./smartstudy.html">SmartStudy</a>
-        <a href="./about.html">About</a>
-        <a href="./partnerships.html">Partnerships</a>
-        <a href="./contact.html" class="ocs-cta">Contact</a>
+      <div class="brand">
+        <strong>OLLS CREATIVE STUDIO</strong>
+        <span>Websites • Apps • Digital Products</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a class="active" href="work.html">Work</a>
+        <a href="website.html">Website</a>
+        <a href="smartstudy.html">SmartStudy</a>
+        <a href="about.html">About</a>
+        <a href="partnerships.html">Partnerships</a>
+        <a href="contact.html">Contact</a>
       </nav>
-
     </div>
   </header>
 
+  <main class="wrap">
+
     <!-- HERO -->
-  <section class="hero bg-grid bg-shapes">
-    <div class="hero-divider"></div>
-    <h1 class="hero-eyebrow">Work</h1>
-    <h2 class="hero-main">SELECTED PROJECTS</h2>
-    <p class="hero-sub">
-      Real builds + exactly what I can build for you. Projects and services are separated so clients instantly understand what’s what.
-    </p>
+    <section class="hero">
+      <div class="hero-card">
+        <div class="kicker"><b>Work</b> selected projects + services</div>
+        <h1>Real builds.<br/>No mystery buttons.</h1>
+        <p class="lead">
+          Portfolio items are shown as real projects with clear descriptions.
+          Services are separated below so clients instantly understand what’s what.
+        </p>
 
-    <div style="margin-top: 18px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
-      <a href="#featured" class="btn">View Featured Projects</a>
-      <a href="#services" class="btn" style="opacity:.9;">See What I Build</a>
-    </div>
-  </section>
+        <div class="cta-row">
+          <a class="btn primary" href="#projects">View Featured Projects</a>
+          <a class="btn" href="#services">See What I Build</a>
+          <a class="btn" href="contact.html">Request a Quote</a>
+        </div>
+      </div>
 
-  <!-- FEATURED PROJECTS -->
-  <section id="featured" class="container" style="padding: 40px 0 22px;">
-    <div style="max-width: 980px; margin: 0 auto;">
-      <h2 style="margin:0; letter-spacing:.04em;">Featured Projects</h2>
-      <p style="margin:10px 0 0; color: var(--grey); line-height:1.8;">
-        These are real builds. Each one includes a short description so nothing feels like a mystery button.
-      </p>
-    </div>
-  </section>
+      <aside class="side">
+        <h3>What you get</h3>
+        <p>
+          Clean design, fast builds, clear communication — and a proper end result
+          that looks expensive and works on mobile.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Mobile-first</span>
+          <span class="pill">Modern UI</span>
+          <span class="pill">Fast delivery</span>
+          <span class="pill">Clear structure</span>
+          <span class="pill">Real results</span>
+        </div>
+      </aside>
+    </section>
 
-  <!-- Project filter (projects only) -->
-  <section class="container" style="padding: 10px 0 0;">
-    <div class="tabs" role="tablist" aria-label="Project Filter">
-      <button class="tab-btn active" data-pfilter="all" role="tab">All</button>
-      <button class="tab-btn" data-pfilter="app" role="tab">Apps</button>
-      <button class="tab-btn" data-pfilter="website" role="tab">Websites</button>
-      <button class="tab-btn" data-pfilter="tool" role="tab">Tools</button>
-    </div>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section-head">
+        <div>
+          <h2>Featured Projects</h2>
+          <p class="sub">These are real builds. Filter by type — the buttons actually work.</p>
+        </div>
+        <div class="filters" aria-label="Project filters">
+          <button class="chip active" data-filter="all" type="button">All</button>
+          <button class="chip" data-filter="app" type="button">Apps</button>
+          <button class="chip" data-filter="website" type="button">Websites</button>
+          <button class="chip" data-filter="tool" type="button">Tools</button>
+        </div>
+      </div>
 
-    <!-- Optional helper line to stop “acts like a button” confusion -->
-    <p style="margin: 14px 0 0; text-align:center; color: var(--grey);">
-      Filter projects — services are shown below.
-    </p>
-  </section>
+      <div class="grid" id="projectGrid">
 
-  <!-- Featured project grid -->
-  <section class="container" style="padding: 28px 0 70px;">
-    <div class="grid work-grid" id="featuredGrid">
-
-      <!-- SmartStudy -->
-      <div class="card work-card" data-ptype="app">
-        <div class="work-top">
+        <!-- SmartStudy -->
+        <article class="card" data-type="app">
+          <div class="card-top">
+            <span class="tag green">App</span>
+            <span class="tag gray">Student platform</span>
+          </div>
           <h3>SmartStudy</h3>
-          <span class="pill">App</span>
-        </div>
-        <p>
-          An all-in-one revision + progress system for UK students — track scores, target weak topics, and study smarter.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Highlights:<br>
-          • Progress tracking & subject breakdowns<br>
-          • Clear, student-friendly UI<br>
-          • Built to scale into a full platform
-        </p>
-        <div class="work-actions">
-          <a href="./smartstudy.html" class="btn">View Project</a>
-          <a href="./contact.html?subject=SmartStudy%20Style%20Build" class="btn" style="opacity:.9;">Request Something Similar</a>
-        </div>
-      </div>
+          <p>
+            An all-in-one revision + progress system for UK students — track scores,
+            target weak topics, and study smarter.
+          </p>
+          <ul class="bullets">
+            <li>Progress tracking + subject breakdowns</li>
+            <li>Clear, student-friendly UI</li>
+            <li>Built to scale into a full platform</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="smartstudy.html">View Project</a>
+            <a class="btn" href="contact.html">Request Something Similar</a>
+          </div>
+        </article>
 
-      <!-- Flossie's Bakehouse -->
-      <div class="card work-card" data-ptype="website">
-        <div class="work-top">
+        <!-- Flossie's Bakehouse -->
+        <article class="card" data-type="website">
+          <div class="card-top">
+            <span class="tag blue">Website</span>
+            <span class="tag gray">Client build</span>
+          </div>
           <h3>Flossie’s Bakehouse</h3>
-          <span class="pill">Website</span>
-        </div>
-        <p>
-          A real bakery website build — modern layout, clean navigation, and a customer-friendly design that feels on-brand.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Highlights:<br>
-          • Mobile-first layout<br>
-          • Clear sections & menus<br>
-          • Built for real customers
-        </p>
-        <div class="work-actions">
-          <a href="https://ocs-uk.github.io/Flossies-Bakehouse/" target="_blank" rel="noopener" class="btn">
-            View Live Website
-          </a>
-          <a href="./contact.html?subject=Flossies%20Style%20Website" class="btn" style="opacity:.9;">Request Something Similar</a>
-        </div>
-      </div>
+          <p>
+            A real bakery website build — modern layout, clean navigation, and a
+            customer-friendly design that feels on-brand.
+          </p>
+          <ul class="bullets">
+            <li>Mobile-first layout</li>
+            <li>Clear sections + menus</li>
+            <li>Built for real customers</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="https://ocs-uk.github.io/flossies-bakehouse/" target="_blank" rel="noopener">View Live</a>
+            <a class="btn" href="contact.html">Request Something Similar</a>
+          </div>
+        </article>
 
-      <!-- Tools example / placeholder -->
-      <div class="card work-card" data-ptype="tool">
-        <div class="work-top">
+        <!-- Dashboards & Tools -->
+        <article class="card" data-type="tool">
+          <div class="card-top">
+            <span class="tag gray">Tools</span>
+            <span class="tag gray">Internal systems</span>
+          </div>
           <h3>Dashboards & Tools</h3>
-          <span class="pill">Tools</span>
-        </div>
-        <p>
-          Lightweight tools that save time — dashboards, trackers, and internal panels built to be simple, fast, and clean.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Examples:<br>
-          • Trackers & calculators<br>
-          • Admin dashboards<br>
-          • Workflow automations
-        </p>
-        <div class="work-actions">
-          <a href="./contact.html?subject=Tool%20Request" class="btn">Request a Tool</a>
+          <p>
+            Lightweight tools that save time — dashboards, trackers, and internal panels
+            built to be simple, fast, and clean.
+          </p>
+          <ul class="bullets">
+            <li>Trackers + calculators</li>
+            <li>Admin dashboards</li>
+            <li>Workflow automations</li>
+          </ul>
+          <div class="actions">
+            <a class="btn primary" href="contact.html">Request a Tool</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+      <div class="section-head">
+        <div>
+          <h2>What I Build</h2>
+          <p class="sub">These are services — not portfolio items. Each one explains what you actually get.</p>
         </div>
       </div>
 
-    </div>
-  </section>
+      <div class="service-grid">
 
-  <!-- SERVICES (what you build) -->
-  <section id="services" class="container" style="padding: 10px 0 22px;">
-    <div style="max-width: 980px; margin: 0 auto;">
-      <h2 style="margin:0; letter-spacing:.04em;">What I Build</h2>
-      <p style="margin:10px 0 0; color: var(--grey); line-height:1.8;">
-        These are services — not portfolio items. Each one explains what you get so clients understand instantly.
-      </p>
-    </div>
-  </section>
-
-  <section class="container" style="padding: 28px 0 90px;">
-    <div class="grid work-grid">
-
-      <!-- Websites service -->
-      <div class="card work-card">
-        <div class="work-top">
-          <h3>Websites</h3>
-          <span class="pill">Service</span>
+        <div class="service">
+          <div class="tag blue">Service</div>
+          <h4>Websites</h4>
+          <ul>
+            <li>Mobile-first layout + clear sections</li>
+            <li>Strong CTA flow (leads / bookings / enquiries)</li>
+            <li>Fast loading, modern design</li>
+          </ul>
+          <a class="btn primary" href="contact.html">Request a Website</a>
         </div>
-        <p>
-          Clean, modern websites built for speed and clarity — business sites, portfolios, landing pages, and bookings.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Includes:<br>
-          • Mobile-first layout<br>
-          • Clear CTA flow (leads / bookings / enquiries)<br>
-          • Fast loading + clean sections
-        </p>
-        <div class="work-actions">
-          <a href="./contact.html?subject=Website%20Enquiry" class="btn">Request a Website</a>
+
+        <div class="service">
+          <div class="tag green">Service</div>
+          <h4>Apps</h4>
+          <ul>
+            <li>MVP planning + roadmap</li>
+            <li>Simple, user-friendly UI</li>
+            <li>Feature scoping (what to build first)</li>
+          </ul>
+          <a class="btn primary" href="contact.html">Request an App</a>
         </div>
+
+        <div class="service">
+          <div class="tag gray">Service</div>
+          <h4>Tools & Automations</h4>
+          <ul>
+            <li>Dashboards + trackers</li>
+            <li>Forms / workflows</li>
+            <li>Quality-of-life systems</li>
+          </ul>
+          <a class="btn primary" href="contact.html">Request a Tool</a>
+        </div>
+
+        <div class="service">
+          <div class="tag gray">Service</div>
+          <h4>Coding Courses</h4>
+          <ul>
+            <li>Beginner-friendly web skills</li>
+            <li>Real projects (not boring theory)</li>
+            <li>Good habits + how to learn properly</li>
+          </ul>
+          <a class="btn primary" href="contact.html">Ask about Courses</a>
+        </div>
+
       </div>
 
-      <!-- Apps service -->
-      <div class="card work-card">
-        <div class="work-top">
-          <h3>Apps</h3>
-          <span class="pill">Service</span>
+      <div class="bottom-cta">
+        <div>
+          <h3>Want something built?</h3>
+          <p>Send what you want, your deadline, and any references — I’ll handle the rest.</p>
         </div>
-        <p>
-          Cross-platform app builds for tracking, learning, and productivity — ideal for MVPs and real-world tools.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Includes:<br>
-          • MVP planning + roadmap<br>
-          • Simple, user-friendly UI<br>
-          • Feature scoping (what to build first)
-        </p>
-        <div class="work-actions">
-          <a href="./contact.html?subject=App%20Enquiry" class="btn">Request an App</a>
-        </div>
+        <a class="btn primary" href="contact.html">Contact</a>
       </div>
+    </section>
 
-      <!-- Tools service -->
-      <div class="card work-card">
-        <div class="work-top">
-          <h3>Tools & Automations</h3>
-          <span class="pill">Service</span>
-        </div>
-        <p>
-          Dashboards, trackers, workflows and small automations that save time and reduce admin.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Includes:<br>
-          • Trackers & dashboards<br>
-          • Forms / workflows<br>
-          • Quality-of-life tools
-        </p>
-        <div class="work-actions">
-          <a href="./contact.html?subject=Tool%20Request" class="btn">Request a Tool</a>
-        </div>
-      </div>
+  </main>
 
-      <!-- Courses service -->
-      <div class="card work-card">
-        <div class="work-top">
-          <h3>Coding Courses</h3>
-          <span class="pill">Service</span>
-        </div>
-        <p>
-          Beginner-friendly coding help for younger learners — calm, clear, step-by-step learning with real projects.
-        </p>
-        <p style="color: var(--grey); line-height: 1.9; margin-top: 12px;">
-          Topics can include:<br>
-          • HTML + CSS (real websites)<br>
-          • JavaScript basics<br>
-          • Small projects + challenges<br>
-          • Good habits & how to learn properly
-        </p>
-        <div class="work-actions">
-          <a href="./contact.html?subject=Coding%20Course%20Enquiry" class="btn">Ask about Courses</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- FINAL CTA -->
-  <section class="final-cta">
-    <div class="final-inner">
-      <h2>Want something built?</h2>
-      <p>
-        Tell me what you want, your deadline, and any references — I’ll handle the rest.
-      </p>
-      <a href="./contact.html" class="btn">Contact</a>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <span>© 2025 Olls Creative Studio</span>
+  <footer>
+    © 2025 Olls Creative Studio
   </footer>
 
-  <script src="./script.js"></script>
+  <script>
+    // Project filter (simple + reliable)
+    const chips = document.querySelectorAll('.chip');
+    const cards = document.querySelectorAll('#projectGrid .card');
+
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+
+        const filter = chip.dataset.filter;
+
+        cards.forEach(card => {
+          const type = card.dataset.type;
+          const show = (filter === 'all') || (type === filter);
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
