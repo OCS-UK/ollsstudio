@@ -524,3 +524,59 @@ ul{ margin:0; padding-left:18px; }
   border-top: 1px solid rgba(255,255,255,.06);
   background: rgba(2,6,23,.70);
 }
+
+
+/* Partnerships page polish */
+.partnership-hero-actions{
+  margin-top: 26px;
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.btn.btn-gradient{
+  background: linear-gradient(135deg, var(--blue), var(--purple));
+  box-shadow: 0 0 18px rgba(59,130,246,.35);
+}
+
+/* Featured partner formatting */
+.featured-partner{
+  grid-column: 1 / -1;
+}
+
+.partner-logo-row{
+  display:flex;
+  gap:18px;
+  align-items:flex-start;
+  flex-wrap:wrap;
+  margin-top:16px;
+}
+
+.partner-logo-row img{
+  max-width:120px;
+  height:auto;
+}
+
+.partner-intro{
+  flex:1;
+  min-width:260px;
+  color: var(--grey);
+  line-height: 1.9;
+}
+
+.partner-paragraph{
+  color: var(--grey);
+  line-height: 1.9;
+}
+
+.partner-quote{
+  margin-top:12px;
+  background: rgba(255,255,255,0.03);
+}
+
+.partner-quote p{
+  margin:0;
+  font-style: italic;
+  line-height: 1.85;
+}
